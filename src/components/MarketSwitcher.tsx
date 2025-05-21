@@ -149,6 +149,7 @@ export const MarketSwitcher = () => {
       aria-label="select market"
       data-cy="marketSelector"
       value={currentMarket}
+      disabled
       onChange={handleMarketSelect}
       sx={{
         mr: 2,

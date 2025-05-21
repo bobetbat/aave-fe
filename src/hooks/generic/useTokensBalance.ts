@@ -23,7 +23,7 @@ export const useTokensBalance = (tokenList: TokenInfo[], chainId: number, user: 
         // @ts-ignore
         ethersProvider: provider as unknown as providers.Provider,
         tryAggregate: true,
-        multicallCustomContractAddress: '0xcA11bde05977b3631167028862bE2a173976CA11',
+        multicallCustomContractAddress: '0xcA11bde05977b3631167028862bE2a173976CA11', // TODO CHECK USAGE
       });
       const contractCallContext = tokensWithoutNative.map((token) => {
         return {

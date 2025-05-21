@@ -76,6 +76,34 @@ export type BaseNetworkConfig = Omit<NetworkConfig, 'explorerLinkBuilder'>;
 
 const ratesHistoryApiUrl = `${process.env.NEXT_PUBLIC_API_BASEURL}/data/rates-history`;
 
+export const somniaTestnet: Chain = {
+  id: 50312, // Chain ID
+  name: 'Somnia Testnet',
+  nativeCurrency: {
+    name: 'STT',
+    symbol: 'STT',
+    decimals: 18,
+  },
+  rpcUrls: {
+    default: {
+      http: [
+        // 'https://rpc.ankr.com/somnia_testnet/6e3fd81558cf77b928b06b38e9409b4677b637118114e83364486294d5ff4811',
+        'https://dream-rpc.somnia.network',
+      ],
+    },
+    public: {
+      http: [
+        // 'https://rpc.ankr.com/somnia_testnet/6e3fd81558cf77b928b06b38e9409b4677b637118114e83364486294d5ff4811',
+        'https://dream-rpc.somnia.network',
+      ],
+    },
+  },
+  blockExplorers: {
+    default: { name: 'Somnia Testnet explorer', url: 'https://shannon-explorer.somnia.network/' },
+  },
+  testnet: true,
+};
+
 export const testnetConfig: Record<string, BaseNetworkConfig> = {
   [ChainId.sepolia]: {
     name: 'Ethereum Sepolia',
@@ -94,6 +122,21 @@ export const testnetConfig: Record<string, BaseNetworkConfig> = {
     isTestnet: true,
     networkLogoPath: '/icons/networks/ethereum.svg',
     wagmiChain: sepolia,
+  },
+  [somniaTestnet.id]: {
+    name: 'Somnia Testnet',
+    publicJsonRPCUrl: [
+      // 'https://rpc.ankr.com/somnia_testnet/6e3fd81558cf77b928b06b38e9409b4677b637118114e83364486294d5ff4811',
+      'https://dream-rpc.somnia.network',
+    ],
+    baseUniswapAdapter: '0x0',
+    baseAssetSymbol: 'STT',
+    wrappedBaseAssetSymbol: 'WSTT', // todo: check 
+    baseAssetDecimals: 18,
+    explorerLink: 'https://shannon-explorer.somnia.network/',
+    isTestnet: true,
+    networkLogoPath: '/icons/networks/ethereum.svg',
+    wagmiChain: somniaTestnet,
   },
   [ChainId.fuji]: {
     name: 'Avalanche Fuji',

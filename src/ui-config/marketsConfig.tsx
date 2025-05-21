@@ -26,6 +26,7 @@ import {
   AaveV3ZkSync,
 } from '@bgd-labs/aave-address-book';
 import { ReactNode } from 'react';
+import { somniaTestnet } from './networksConfig';
 
 // Enable for premissioned market
 // import { PermissionView } from 'src/components/transactions/FlowCommons/PermissionView';
@@ -81,6 +82,7 @@ export enum CustomMarket {
   proto_scroll_sepolia_v3 = 'proto_scroll_sepolia_v3',
   proto_sepolia_v3 = 'proto_sepolia_v3',
   proto_base_sepolia_v3 = 'proto_base_sepolia_v3',
+  proto_somnia_testnet_v3 = 'proto_somnia_testnet_v3',
   // v3 mainnets
   proto_mainnet_v3 = 'proto_mainnet_v3',
   proto_optimism_v3 = 'proto_optimism_v3',
@@ -142,6 +144,42 @@ export const marketsData: {
       GHO_UI_DATA_PROVIDER: AaveV3Ethereum.UI_GHO_DATA_PROVIDER,
       WITHDRAW_SWITCH_ADAPTER: AaveV3Ethereum.WITHDRAW_SWAP_ADAPTER,
       DEBT_SWITCH_ADAPTER: AaveV3Ethereum.DEBT_SWAP_ADAPTER,
+    },
+  },
+  [CustomMarket.proto_somnia_testnet_v3]: {
+    marketTitle: 'Somnia Testnet',
+    market: CustomMarket.proto_somnia_testnet_v3,
+    chainId: somniaTestnet.id,
+    v3: true,
+    enabledFeatures: {
+      governance: true,
+      staking: true,
+      liquiditySwap: true,
+      collateralRepay: true,
+      incentives: true,
+      withdrawAndSwitch: true,
+      debtSwitch: true,
+      faucet: true,
+      switch: true,
+    },
+    isFork: true,
+    subgraphUrl: `https://gateway-arbitrum.network.thegraph.com/api/${apiKey}/subgraphs/id/Cd2gEDVeqnjBn1hSeqFMitw8Q1iiyV9FYUZkLNRcL87g`,
+    addresses: {
+      WALLET_BALANCE_PROVIDER: '0x943b253fc65D0575862A26852B3c92d5A2c60E63',
+      UI_POOL_DATA_PROVIDER: '0xbBd0fEfE6A08b62dc001Be66074938b37772DC1a',
+      WETH_GATEWAY: '0x67a3eCe126AbB3Bba2E75728E28C48fC8b581Dd7',
+      UI_INCENTIVE_DATA_PROVIDER: '0xCB92476EA3D1254CF6bDBe1BAF08a1E98Ca03493',
+      LENDING_POOL_ADDRESS_PROVIDER: '0x96950c5BA77B951C8Cf593B3b24d181eAC9262C7',
+      LENDING_POOL: '0x564F1fE58852A225dE13F1909e9f662659A2E540',
+      FAUCET: '0x188E2d76c0dAc054251b9B1A995Eab195c691165',
+
+      REPAY_WITH_COLLATERAL_ADAPTER: '', // TODO: Deploy or disable feature
+      SWAP_COLLATERAL_ADAPTER: '', // TODO: Deploy or disable feature
+      COLLECTOR: '', // ??
+      DEBT_SWITCH_ADAPTER: '', // Optional, deploy if supporting debt switch via adapter
+      WITHDRAW_SWITCH_ADAPTER: '', // Optional
+      GHO_TOKEN_ADDRESS: '', // Not applicable unless GHO is deployed
+      GHO_UI_DATA_PROVIDER: '', // Same as above
     },
   },
   [CustomMarket.proto_lido_v3]: {
