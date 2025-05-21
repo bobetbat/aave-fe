@@ -26,6 +26,7 @@ import {
   AaveV3ZkSync,
 } from '@bgd-labs/aave-address-book';
 import { ReactNode } from 'react';
+
 import { somniaTestnet } from './networksConfig';
 
 // Enable for premissioned market

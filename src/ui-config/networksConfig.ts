@@ -131,7 +131,7 @@ export const testnetConfig: Record<string, BaseNetworkConfig> = {
     ],
     baseUniswapAdapter: '0x0',
     baseAssetSymbol: 'STT',
-    wrappedBaseAssetSymbol: 'WSTT', // todo: check 
+    wrappedBaseAssetSymbol: 'WSTT', // todo: check
     baseAssetDecimals: 18,
     explorerLink: 'https://shannon-explorer.somnia.network/',
     isTestnet: true,
