@@ -27,8 +27,8 @@ import {
   networkConfigs,
   STAGING_ENV,
 } from '../utils/marketsAndNetworksConfig';
-import StyledToggleButton from './StyledToggleButton';
-import StyledToggleButtonGroup from './StyledToggleButtonGroup';
+// import StyledToggleButton from './StyledToggleButton';
+// import StyledToggleButtonGroup from './StyledToggleButtonGroup';
 
 export const getMarketInfoById = (marketId: CustomMarket) => {
   const market: MarketDataType = marketsData[marketId as CustomMarket];
@@ -111,9 +111,7 @@ enum SelectedMarketVersion {
 }
 
 export const MarketSwitcher = () => {
-  const [selectedMarketVersion, setSelectedMarketVersion] = useState<SelectedMarketVersion>(
-    SelectedMarketVersion.V3
-  );
+  const [selectedMarketVersion] = useState<SelectedMarketVersion>(SelectedMarketVersion.V3);
   const theme = useTheme();
   const upToLG = useMediaQuery(theme.breakpoints.up('lg'));
   const downToXSM = useMediaQuery(theme.breakpoints.down('xsm'));
@@ -121,13 +119,13 @@ export const MarketSwitcher = () => {
     useShallow((store) => [store.trackEvent, store.currentMarket, store.setCurrentMarket])
   );
 
-  const isV3MarketsAvailable = availableMarkets
-    .map((marketId: CustomMarket) => {
-      const { market } = getMarketInfoById(marketId);
+  // const isV3MarketsAvailable = availableMarkets
+  //   .map((marketId: CustomMarket) => {
+  //     const { market } = getMarketInfoById(marketId);
 
-      return market.v3;
-    })
-    .some((item) => !!item);
+  //     return market.v3;
+  //   })
+  //   .some((item) => !!item);
 
   const handleMarketSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     trackEvent(DASHBOARD.CHANGE_MARKET, { market: e.target.value });
@@ -149,7 +147,7 @@ export const MarketSwitcher = () => {
       aria-label="select market"
       data-cy="marketSelector"
       value={currentMarket}
-      disabled
+      // disabled
       onChange={handleMarketSelect}
       sx={{
         mr: 2,
@@ -183,10 +181,7 @@ export const MarketSwitcher = () => {
                     }}
                   >
                     {getMarketHelpData(market.marketTitle).name} {market.isFork ? 'Fork' : ''}
-                    {upToLG &&
-                    (currentMarket === 'proto_mainnet_v3' || currentMarket === 'proto_lido_v3')
-                      ? 'Instance'
-                      : ' Market'}
+                    {upToLG && 'Market'}
                   </Typography>
                   {market.v3 ? (
                     <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -293,7 +288,7 @@ export const MarketSwitcher = () => {
           </Trans>
         </Typography>
       </Box>
-      {isV3MarketsAvailable && (
+      {/* {isV3MarketsAvailable && (
         <Box sx={{ mx: '18px', display: 'flex', justifyContent: 'center' }}>
           <StyledToggleButtonGroup
             value={selectedMarketVersion}
@@ -376,7 +371,7 @@ export const MarketSwitcher = () => {
             </StyledToggleButton>
           </StyledToggleButtonGroup>
         </Box>
-      )}
+      )} */}
       {availableMarkets.map((marketId: CustomMarket) => {
         const { market, logo } = getMarketInfoById(marketId);
         const marketNaming = getMarketHelpData(market.marketTitle);

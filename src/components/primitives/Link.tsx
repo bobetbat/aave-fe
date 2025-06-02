@@ -134,4 +134,5 @@ export const ROUTES = {
     `/reserve-overview/?underlyingAsset=${underlyingAsset}&marketName=${marketName}`,
   history: '/history',
   bridge: '/bridge',
+  cgm: 'https://somnia-credit-arena-cgm.vercel.app/',
 };

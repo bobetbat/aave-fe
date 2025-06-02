@@ -1,6 +1,6 @@
 import {
   InformationCircleIcon,
-  SparklesIcon,
+  // SparklesIcon,
   SwitchHorizontalIcon,
 } from '@heroicons/react/outline';
 import { Trans } from '@lingui/macro';
@@ -92,10 +92,10 @@ export function AppHeader() {
   const sm = useMediaQuery(breakpoints.down('sm'));
   const smd = useMediaQuery('(max-width:1120px)');
 
-  const [visitedSwitch, setVisitedSwitch] = useState(() => {
-    if (typeof window === 'undefined') return true;
-    return Boolean(localStorage.getItem(SWITCH_VISITED_KEY));
-  });
+  // const [visitedSwitch, setVisitedSwitch] = useState(() => {
+  //   if (typeof window === 'undefined') return true;
+  //   return Boolean(localStorage.getItem(SWITCH_VISITED_KEY));
+  // });
 
   const [mobileDrawerOpen, setMobileDrawerOpen, currentMarketData] = useRootStore(
     useShallow((state) => [
@@ -105,7 +105,7 @@ export function AppHeader() {
     ])
   );
 
-  const { openSwitch, openBridge, openReadMode } = useModalContext();
+  const { openSwitch, openReadMode } = useModalContext();
   const { readOnlyMode } = useWeb3Context();
   const [walletWidgetOpen, setWalletWidgetOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -145,13 +145,13 @@ export function AppHeader() {
 
   const handleSwitchClick = () => {
     localStorage.setItem(SWITCH_VISITED_KEY, 'true');
-    setVisitedSwitch(true);
+    // setVisitedSwitch(true);
     openSwitch();
   };
 
-  const handleBridgeClick = () => {
-    openBridge();
-  };
+  // const handleBridgeClick = () => {
+  //   openBridge();
+  // };
 
   const testnetTooltip = (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'start', gap: 1 }}>
@@ -271,7 +271,7 @@ export function AppHeader() {
 
         <Box sx={{ flexGrow: 1 }} />
 
-        <NoSsr>
+        {/* <NoSsr>
           <StyledBadge
             invisible={visitedSwitch}
             variant="dot"
@@ -294,7 +294,7 @@ export function AppHeader() {
               </SvgIcon>
             </Button>
           </StyledBadge>
-        </NoSsr>
+        </NoSsr> */}
 
         <NoSsr>
           <StyledBadge
