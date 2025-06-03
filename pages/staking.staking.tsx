@@ -18,11 +18,9 @@ import { useUserStakeUiData } from 'src/hooks/stake/useUserStakeUiData';
 import { useModalContext } from 'src/hooks/useModal';
 import { MainLayout } from 'src/layouts/MainLayout';
 import { GetABPToken } from 'src/modules/staking/GetABPToken';
-import { GhoDiscountProgram } from 'src/modules/staking/GhoDiscountProgram';
 import { StakingHeader } from 'src/modules/staking/StakingHeader';
 import { StakingPanel } from 'src/modules/staking/StakingPanel';
 import { useRootStore } from 'src/store/root';
-import { ENABLE_TESTNET, STAGING_ENV } from 'src/utils/marketsAndNetworksConfig';
 
 import { useWeb3Context } from '../src/libs/hooks/useWeb3Context';
 
@@ -68,22 +66,15 @@ export default function Staking() {
     [stkAave, stkBpt, stkGho, stkBptV2] = stakeGeneralResult;
   }
 
-  let stkAaveUserData: StakeUIUserData | undefined;
   let stkBptUserData: StakeUIUserData | undefined;
   let stkGhoUserData: StakeUIUserData | undefined;
   let stkBptV2UserData: StakeUIUserData | undefined;
   if (stakeUserResult && Array.isArray(stakeUserResult)) {
-    [stkAaveUserData, stkBptUserData, stkGhoUserData, stkBptV2UserData] = stakeUserResult;
+    [stkBptUserData, stkGhoUserData, stkBptV2UserData] = stakeUserResult;
   }
 
-  const {
-    openStake,
-    openStakeCooldown,
-    openUnstake,
-    openStakeRewardsClaim,
-    openStakeRewardsRestakeClaim,
-    openStakingMigrate,
-  } = useModalContext();
+  const { openStake, openStakeCooldown, openUnstake, openStakeRewardsClaim, openStakingMigrate } =
+    useModalContext();
 
   const [mode, setMode] = useState<Stake>(Stake.aave);
 
@@ -111,7 +102,6 @@ export default function Staking() {
       .mul('86400')
   );
 
-  const isStakeAAVE = mode === 'aave';
   const isStkGho = mode === 'gho';
   const isStkBpt = mode === 'bpt';
 
@@ -161,52 +151,6 @@ export default function Staking() {
             </Box>
 
             <Grid container spacing={4}>
-              <Grid
-                item
-                xs={12}
-                lg={STAGING_ENV || ENABLE_TESTNET ? 12 : 6}
-                sx={{
-                  display: { xs: !isStakeAAVE ? 'none' : 'block', lg: 'block' },
-                }}
-              >
-                <StakingPanel
-                  stakeTitle="AAVE"
-                  stakedToken="AAVE"
-                  maxSlash={stkAave?.maxSlashablePercentageFormatted || '0'}
-                  icon="aave"
-                  stakeData={stkAave}
-                  stakeUserData={stkAaveUserData}
-                  onStakeAction={() => openStake(Stake.aave, 'AAVE')}
-                  onCooldownAction={() => openStakeCooldown(Stake.aave, 'AAVE')}
-                  onUnstakeAction={() => openUnstake(Stake.aave, 'AAVE')}
-                  onStakeRewardClaimAction={() => openStakeRewardsClaim(Stake.aave, 'AAVE')}
-                  onStakeRewardClaimRestakeAction={() =>
-                    openStakeRewardsRestakeClaim(Stake.aave, 'AAVE')
-                  }
-                >
-                  <Box
-                    sx={{
-                      mt: {
-                        xs: '20px',
-                        xsm: '36px',
-                      },
-                      px: {
-                        xsm: 6,
-                      },
-                      width:
-                        STAGING_ENV || ENABLE_TESTNET
-                          ? {
-                              xs: '100%',
-                              lg: '50%',
-                            }
-                          : '100%',
-                      marginX: 'auto',
-                    }}
-                  >
-                    <GhoDiscountProgram />
-                  </Box>
-                </StakingPanel>
-              </Grid>
               <Grid
                 item
                 xs={12}
