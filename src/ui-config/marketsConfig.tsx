@@ -141,13 +141,13 @@ export const marketsData: Partial<{
     isFork: true,
     subgraphUrl: 'https://proxy.somnia.chain.love/subgraphs/name/somnia-testnet/credit-arena',
     addresses: {
-      WALLET_BALANCE_PROVIDER: '0x943b253fc65D0575862A26852B3c92d5A2c60E63',
-      UI_POOL_DATA_PROVIDER: '0xbBd0fEfE6A08b62dc001Be66074938b37772DC1a',
-      WETH_GATEWAY: '0x67a3eCe126AbB3Bba2E75728E28C48fC8b581Dd7',
-      UI_INCENTIVE_DATA_PROVIDER: '0xCB92476EA3D1254CF6bDBe1BAF08a1E98Ca03493',
-      LENDING_POOL_ADDRESS_PROVIDER: '0x96950c5BA77B951C8Cf593B3b24d181eAC9262C7',
-      LENDING_POOL: '0x564F1fE58852A225dE13F1909e9f662659A2E540',
-      FAUCET: '0x188E2d76c0dAc054251b9B1A995Eab195c691165',
+      WALLET_BALANCE_PROVIDER: '0x7F641b8d797059925DCCA201c339908b6B0185d4', // WalletBalanceProvider
+      UI_POOL_DATA_PROVIDER: '0xC7BaD0ff31Cc31735d83F7D75cd99177279195A1', // UiPoolDataProviderV3
+      WETH_GATEWAY: '0x0D0a5093d3D01C72ecf3af235F7f46BeE4f50073', // WrappedTokenGatewayV3
+      UI_INCENTIVE_DATA_PROVIDER: '0x3aa8236C922326c94119A014340733Ca129A42d5', //UiIncentiveDataProviderV3
+      LENDING_POOL_ADDRESS_PROVIDER: '0x0B8DE09b93aF7B57853f49275Cd762E7A72c6461', // PoolAddressesProvider-Aave (Aave is marketName on deploy)
+      LENDING_POOL: '0x4eE7C739EB333F4f3610d30C1DBc7039075B0904', // Pool-Proxy-Aave (Aave is marketName on deploy)
+      FAUCET: '', // Faucet-Aave (Aave is marketName on deploy)
 
       REPAY_WITH_COLLATERAL_ADAPTER: '', // TODO: Deploy or disable feature
       SWAP_COLLATERAL_ADAPTER: '', // TODO: Deploy or disable feature
