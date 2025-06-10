@@ -141,19 +141,20 @@ export const marketsData: Partial<{
     isFork: true,
     subgraphUrl: 'https://proxy.somnia.chain.love/subgraphs/name/somnia-testnet/credit-arena',
     addresses: {
-      WALLET_BALANCE_PROVIDER: '0x1A98045F37F7c017607181Eb0a778B81B1080F07', // WalletBalanceProvider
-      UI_POOL_DATA_PROVIDER: '0xC9BB204C5E5b4da8832ADd04C711977481C3A649', // UiPoolDataProviderV3
-      WETH_GATEWAY: '0x8150B862c86614F5957D26Dc3Ca010885bc44649', // WrappedTokenGatewayV3
-      UI_INCENTIVE_DATA_PROVIDER: '0x7602Ba2B244eb5219625CfBCaa9B8F3F477c80BF', //UiIncentiveDataProviderV3
-      LENDING_POOL_ADDRESS_PROVIDER: '0x429b427e2233268D52460AfFadED2f04Ee5A7ac9', // PoolAddressesProvider-Aave (Aave is marketName on deploy)
-      LENDING_POOL: '0x76d71F4291dB7ab020101373de31F23a8aD37f7c', // Pool-Proxy-Aave (Aave is marketName on deploy)
+      WALLET_BALANCE_PROVIDER: '0xbfFad566145F52AF1cd37e0914bA031FEE894439', // WalletBalanceProvider
+      UI_POOL_DATA_PROVIDER: '0x6B22c2Ab427747b391c1387496eFEB1F3efF9ca4', // UiPoolDataProviderV3
+      WETH_GATEWAY: '0x54417034e12e4622e4850eea032D530732d977e0', // WrappedTokenGatewayV3
+      UI_INCENTIVE_DATA_PROVIDER: '0x9aC1fE05d82d7D23F61c6b81b98e09912408484d', //UiIncentiveDataProviderV3
+      LENDING_POOL_ADDRESS_PROVIDER: '0xf0d33f5bABf973a4882d9E41eF53Ce8b106Cebe1', // PoolAddressesProvider-Aave (Aave is marketName on deploy)
+      LENDING_POOL: '0xb130423b21722e1635C20DAA684d9Ec032fb1727', // Pool-Proxy-Aave (Aave is marketName on deploy)
       FAUCET: '', // Faucet-Aave (Aave is marketName on deploy)
 
       REPAY_WITH_COLLATERAL_ADAPTER: '', // TODO: Deploy or disable feature
-      SWAP_COLLATERAL_ADAPTER: '', // TODO: Deploy or disable feature
-      COLLECTOR: '', // ??
       DEBT_SWITCH_ADAPTER: '', // Optional, deploy if supporting debt switch via adapter
+      SWAP_COLLATERAL_ADAPTER: '', // TODO: Deploy or disable feature
       WITHDRAW_SWITCH_ADAPTER: '', // Optional
+
+      COLLECTOR: '', // ??
       GHO_TOKEN_ADDRESS: '', // Not applicable unless GHO is deployed
       GHO_UI_DATA_PROVIDER: '', // Same as above
     },
