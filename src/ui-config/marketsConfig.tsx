@@ -138,8 +138,8 @@ export const marketsData: Partial<{
       faucet: true,
       switch: true,
     },
-    isFork: true,
-    subgraphUrl: 'https://proxy.somnia.chain.love/subgraphs/name/somnia-testnet/credit-arena',
+    isFork: false,
+    subgraphUrl: 'https://proxy.somnia.chain.love/subgraphs/somnia-testnet/arenas-cd',
     addresses: {
       WALLET_BALANCE_PROVIDER: '0xbfFad566145F52AF1cd37e0914bA031FEE894439', // WalletBalanceProvider
       UI_POOL_DATA_PROVIDER: '0x6B22c2Ab427747b391c1387496eFEB1F3efF9ca4', // UiPoolDataProviderV3
