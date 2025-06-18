@@ -1,0 +1,37 @@
+query main($operatorIds: [String]!) {
+  pools(first: 200, where: { operator_in: $operatorIds }) {
+    id
+    name
+    # capitalTokenSymbol
+    # capitalTokenAddress
+    # capitalTokenDecimals
+    operator
+    operatorFee
+    # owner
+    # capitalRequirement
+    # capitalTokenBalance
+    # released
+    data
+    details
+    # markets {
+    #   id
+    #   title
+    #   details
+    #   wording
+    #   premiumToken
+    #   product {
+    #     id
+    #     title
+    #     wording
+    #   }
+    # }
+  }
+
+  _meta {
+    block {
+      number
+      timestamp
+      hash
+    }
+  }
+}

@@ -4,6 +4,26 @@ import { ReactNode } from 'react';
 
 import { somniaTestnet } from './networksConfig';
 
+export interface AtomicaConfig {
+  // NetworkSheetConfig
+  productIds: string[];
+  poolOperatorIds: string[];
+  frontendOperatorAddress: string;
+  lendingFactoryAddress: string;
+  loanTriggerListId: string;
+  chainId: string;
+  marketIds: string[];
+  vaultFactoryAddress?: string;
+  // NetworkConstConfig
+  atomicaApiUrl: string;
+  defaultCapitalToken: string;
+  poolsSubgraphUrl: string;
+  marketsSubgraphUrl: string;
+  vaultsSubgraphUrl: string;
+  baseAssetSymbol: string;
+  baseTokenAddress: string;
+}
+
 // Enable for premissioned market
 // import { PermissionView } from 'src/components/transactions/FlowCommons/PermissionView';
 export type MarketDataType = {
@@ -30,6 +50,7 @@ export type MarketDataType = {
   disableCharts?: boolean;
   subgraphUrl?: string;
   logo?: string;
+  secondaryMarket?: AtomicaConfig;
   addresses: {
     LENDING_POOL_ADDRESS_PROVIDER: string;
     LENDING_POOL: string;
@@ -57,8 +78,10 @@ export enum CustomMarket {
   proto_optimism_sepolia_v3 = 'proto_optimism_sepolia_v3',
   proto_scroll_sepolia_v3 = 'proto_scroll_sepolia_v3',
   proto_sepolia_v3 = 'proto_sepolia_v3',
+  proto_sepolia_secondary_v3 = 'proto_sepolia_secondary_v3',
   proto_base_sepolia_v3 = 'proto_base_sepolia_v3',
   proto_somnia_testnet_v3 = 'proto_somnia_testnet_v3',
+  proto_somnia_secondary_testnet_v3 = 'proto_somnia_secondary_testnet_v3',
   // v3 mainnets
   proto_mainnet_v3 = 'proto_mainnet_v3',
   proto_optimism_v3 = 'proto_optimism_v3',
@@ -124,6 +147,43 @@ export const marketsData: Partial<{
   },
   [CustomMarket.proto_somnia_testnet_v3]: {
     marketTitle: 'Somnia Testnet',
+    market: CustomMarket.proto_somnia_testnet_v3,
+    chainId: somniaTestnet.id,
+    v3: true,
+    enabledFeatures: {
+      governance: true,
+      staking: true,
+      liquiditySwap: true,
+      collateralRepay: true,
+      incentives: true,
+      withdrawAndSwitch: true,
+      debtSwitch: true,
+      faucet: true,
+      switch: true,
+    },
+    isFork: false,
+    subgraphUrl: 'https://proxy.somnia.chain.love/subgraphs/somnia-testnet/arenas-cd',
+    addresses: {
+      WALLET_BALANCE_PROVIDER: '0xbfFad566145F52AF1cd37e0914bA031FEE894439', // WalletBalanceProvider
+      UI_POOL_DATA_PROVIDER: '0x6B22c2Ab427747b391c1387496eFEB1F3efF9ca4', // UiPoolDataProviderV3
+      WETH_GATEWAY: '0x54417034e12e4622e4850eea032D530732d977e0', // WrappedTokenGatewayV3
+      UI_INCENTIVE_DATA_PROVIDER: '0x9aC1fE05d82d7D23F61c6b81b98e09912408484d', //UiIncentiveDataProviderV3
+      LENDING_POOL_ADDRESS_PROVIDER: '0xf0d33f5bABf973a4882d9E41eF53Ce8b106Cebe1', // PoolAddressesProvider-Aave (Aave is marketName on deploy)
+      LENDING_POOL: '0xb130423b21722e1635C20DAA684d9Ec032fb1727', // Pool-Proxy-Aave (Aave is marketName on deploy)
+      FAUCET: '', // Faucet-Aave (Aave is marketName on deploy)
+
+      REPAY_WITH_COLLATERAL_ADAPTER: '', // TODO: Deploy or disable feature
+      DEBT_SWITCH_ADAPTER: '', // Optional, deploy if supporting debt switch via adapter
+      SWAP_COLLATERAL_ADAPTER: '', // TODO: Deploy or disable feature
+      WITHDRAW_SWITCH_ADAPTER: '', // Optional
+
+      COLLECTOR: '', // ??
+      GHO_TOKEN_ADDRESS: '', // Not applicable unless GHO is deployed
+      GHO_UI_DATA_PROVIDER: '', // Same as above
+    },
+  },
+  [CustomMarket.proto_somnia_secondary_testnet_v3]: {
+    marketTitle: 'Somnia Secondary Testnet',
     market: CustomMarket.proto_somnia_testnet_v3,
     chainId: somniaTestnet.id,
     v3: true,
@@ -300,6 +360,46 @@ export const marketsData: Partial<{
     chainId: ChainId.sepolia,
     enabledFeatures: {
       faucet: true,
+    },
+    addresses: {
+      LENDING_POOL_ADDRESS_PROVIDER: AaveV3Sepolia.POOL_ADDRESSES_PROVIDER,
+      LENDING_POOL: AaveV3Sepolia.POOL,
+      WETH_GATEWAY: AaveV3Sepolia.WETH_GATEWAY,
+      FAUCET: AaveV3Sepolia.FAUCET,
+      WALLET_BALANCE_PROVIDER: AaveV3Sepolia.WALLET_BALANCE_PROVIDER,
+      UI_POOL_DATA_PROVIDER: AaveV3Sepolia.UI_POOL_DATA_PROVIDER,
+      UI_INCENTIVE_DATA_PROVIDER: AaveV3Sepolia.UI_INCENTIVE_DATA_PROVIDER,
+      GHO_TOKEN_ADDRESS: '0xc4bF5CbDaBE595361438F8c6a187bDc330539c60',
+      GHO_UI_DATA_PROVIDER: '0x69B9843A16a6E9933125EBD97659BA3CCbE2Ef8A',
+    },
+  },
+  [CustomMarket.proto_sepolia_secondary_v3]: {
+    marketTitle: 'Ethereum Sepolia Secondary',
+    market: CustomMarket.proto_sepolia_secondary_v3,
+    v3: true,
+    chainId: ChainId.sepolia,
+    enabledFeatures: {
+      faucet: true,
+    },
+    secondaryMarket: {
+      // NetworkSheetConfig
+      productIds: ['82'],
+      poolOperatorIds: ['0x3342B8fe20028bB3E259b91E05B50a6feaFeCaEb'],
+      frontendOperatorAddress: '0x3342B8fe20028bB3E259b91E05B50a6feaFeCaEb',
+      lendingFactoryAddress: '0x4A6C49C67cEffB65E71d15aD4B6B2C2a0a7dAd03',
+      loanTriggerListId: '50',
+      chainId: '11155111',
+      marketIds: ['150'],
+      vaultFactoryAddress: '0x4a2bbc60ab39cfe60ecb972e938541243788a139',
+      // NetworkConstConfig
+      atomicaApiUrl: `${process.env.NEXT_PUBLIC_ATOMICA_DEV_API_URL}`,
+      poolsSubgraphUrl: `${process.env.NEXT_PUBLIC_ATOMICA_DEV_API_URL}/v1/deployments/dev-sepolia-v2/poolsV2/graph`,
+      marketsSubgraphUrl: `${process.env.NEXT_PUBLIC_ATOMICA_DEV_API_URL}/v1/deployments/dev-sepolia-v2/marketsV2/graph`,
+      vaultsSubgraphUrl:
+        'https://api.studio.thegraph.com/query/46833/credit-arena-sepolia-vaults/version/latest',
+      defaultCapitalToken: '0x7647562C86172fA2F7462Ac5A69A0555Dbc4762A',
+      baseTokenAddress: '0xdd13E55209Fd76AfE204dBda4007C227904f0a81',
+      baseAssetSymbol: 'ETH',
     },
     addresses: {
       LENDING_POOL_ADDRESS_PROVIDER: AaveV3Sepolia.POOL_ADDRESSES_PROVIDER,

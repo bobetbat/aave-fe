@@ -1,0 +1,7323 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "allownce",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrAboveAllowance",
+    "type": "error",
+    "signature": "0xa7da4a48"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "minPolicyDeposit",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrBelowMinPolicyDeposit",
+    "type": "error",
+    "signature": "0x77d6f10d"
+  },
+  {
+    "inputs": [],
+    "name": "ErrClaimed",
+    "type": "error",
+    "signature": "0x99d8ed08"
+  },
+  {
+    "inputs": [],
+    "name": "ErrDeactivated",
+    "type": "error",
+    "signature": "0x6f0729ca"
+  },
+  {
+    "inputs": [],
+    "name": "ErrDisabled",
+    "type": "error",
+    "signature": "0xbe5ebaed"
+  },
+  {
+    "inputs": [],
+    "name": "ErrEnabled",
+    "type": "error",
+    "signature": "0xfcc8a629"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "timestamp",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrExecutionDelayed",
+    "type": "error",
+    "signature": "0x4f717a1e"
+  },
+  {
+    "inputs": [],
+    "name": "ErrFrontendOperatorNotEnabled",
+    "type": "error",
+    "signature": "0xac44ce1e"
+  },
+  {
+    "inputs": [],
+    "name": "ErrGasPriceNotDefined",
+    "type": "error",
+    "signature": "0xabd24a5b"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInconsistency",
+    "type": "error",
+    "signature": "0x318ca26a"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInsufficientCover",
+    "type": "error",
+    "signature": "0x342f6b31"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidAddress",
+    "type": "error",
+    "signature": "0xd1d16137"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidAmount",
+    "type": "error",
+    "signature": "0xb3726016"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidBidStep",
+    "type": "error",
+    "signature": "0x21692031"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidCapitalToken",
+    "type": "error",
+    "signature": "0x337868fa"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "coverAdjusterOracle",
+        "type": "address"
+      }
+    ],
+    "name": "ErrInvalidCoverAdjusterOracle",
+    "type": "error",
+    "signature": "0xed19fa04"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidCoverBuffer",
+    "type": "error",
+    "signature": "0x98c9b877"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidDuration",
+    "type": "error",
+    "signature": "0x4af51a96"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidExchangeRateOracle",
+    "type": "error",
+    "signature": "0x11f30239"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidIncentiveFee",
+    "type": "error",
+    "signature": "0x71c32346"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidInsuredToken",
+    "type": "error",
+    "signature": "0xebea6e97"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "listId",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrInvalidList",
+    "type": "error",
+    "signature": "0x6e8db199"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidListID",
+    "type": "error",
+    "signature": "0xf683fd65"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidMarket",
+    "type": "error",
+    "signature": "0x3cbed782"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidMaxIterations",
+    "type": "error",
+    "signature": "0x083b3c63"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidOutflowProcessor",
+    "type": "error",
+    "signature": "0x7c211b6a"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidPayoutRequestId",
+    "type": "error",
+    "signature": "0x58b68f5f"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidPermission",
+    "type": "error",
+    "signature": "0x57cdd6c7"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidPremiumRate",
+    "type": "error",
+    "signature": "0x725ae6a5"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidPremiumToken",
+    "type": "error",
+    "signature": "0x3e9de09e"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidProofs",
+    "type": "error",
+    "signature": "0xb80dcd81"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidSettlementDiscount",
+    "type": "error",
+    "signature": "0x59caa60c"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidSignature",
+    "type": "error",
+    "signature": "0x98c96854"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidTailJumpPremiumRatePerSec",
+    "type": "error",
+    "signature": "0x84c70107"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidTailKink",
+    "type": "error",
+    "signature": "0x650d43c8"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidValue",
+    "type": "error",
+    "signature": "0x0cc39ca1"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidWithdrawDelay",
+    "type": "error",
+    "signature": "0xa3c78957"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrMarketClosed",
+    "type": "error",
+    "signature": "0xefe0b3a7"
+  },
+  {
+    "inputs": [],
+    "name": "ErrMarketPayoutDisabled",
+    "type": "error",
+    "signature": "0x7e91210b"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "enum IRiskPoolsControllerStorageModel.MarketStatus",
+        "name": "",
+        "type": "uint8"
+      }
+    ],
+    "name": "ErrMarketStatus",
+    "type": "error",
+    "signature": "0x20cce9db"
+  },
+  {
+    "inputs": [],
+    "name": "ErrMaxMarketCoverMining",
+    "type": "error",
+    "signature": "0x67948bba"
+  },
+  {
+    "inputs": [],
+    "name": "ErrNotAllowed",
+    "type": "error",
+    "signature": "0x37e82d34"
+  },
+  {
+    "inputs": [],
+    "name": "ErrNotDeactivated",
+    "type": "error",
+    "signature": "0x86937e63"
+  },
+  {
+    "inputs": [],
+    "name": "ErrNotSwapCycle",
+    "type": "error",
+    "signature": "0xf336bc1f"
+  },
+  {
+    "inputs": [],
+    "name": "ErrOnlyAllowanceManager",
+    "type": "error",
+    "signature": "0x4b42f40e"
+  },
+  {
+    "inputs": [],
+    "name": "ErrOnlyMarketOperator",
+    "type": "error",
+    "signature": "0x920bf171"
+  },
+  {
+    "inputs": [],
+    "name": "ErrOnlyMarketOwner",
+    "type": "error",
+    "signature": "0x405cb5b5"
+  },
+  {
+    "inputs": [],
+    "name": "ErrOnlyOperator",
+    "type": "error",
+    "signature": "0x8afdddec"
+  },
+  {
+    "inputs": [],
+    "name": "ErrOnlyPayoutApprover",
+    "type": "error",
+    "signature": "0xedabb788"
+  },
+  {
+    "inputs": [],
+    "name": "ErrOnlyPayoutRequester",
+    "type": "error",
+    "signature": "0x70f9a4d0"
+  },
+  {
+    "inputs": [],
+    "name": "ErrOnlyPermissionOwner",
+    "type": "error",
+    "signature": "0xb12089e5"
+  },
+  {
+    "inputs": [],
+    "name": "ErrOnlyPolicyOwner",
+    "type": "error",
+    "signature": "0x7fecec45"
+  },
+  {
+    "inputs": [],
+    "name": "ErrOnlyProductOperator",
+    "type": "error",
+    "signature": "0x202dbc79"
+  },
+  {
+    "inputs": [],
+    "name": "ErrOnlyProductOwner",
+    "type": "error",
+    "signature": "0x31ed49a7"
+  },
+  {
+    "inputs": [],
+    "name": "ErrOnlyRiskPoolOperator",
+    "type": "error",
+    "signature": "0xbad75f6d"
+  },
+  {
+    "inputs": [],
+    "name": "ErrOnlySyncOracle",
+    "type": "error",
+    "signature": "0x8f1b6d7e"
+  },
+  {
+    "inputs": [],
+    "name": "ErrOutOfRange",
+    "type": "error",
+    "signature": "0xcdc6b104"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "timestamp",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrOverdue",
+    "type": "error",
+    "signature": "0x8d7bdbf1"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "listId",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrPassListFailed",
+    "type": "error",
+    "signature": "0xfa85a8e4"
+  },
+  {
+    "inputs": [],
+    "name": "ErrPolicyHealthy",
+    "type": "error",
+    "signature": "0xf2ecdaf6"
+  },
+  {
+    "inputs": [],
+    "name": "ErrPolicyWithdrawClosed",
+    "type": "error",
+    "signature": "0xff828b81"
+  },
+  {
+    "inputs": [],
+    "name": "ErrPoolKeeper",
+    "type": "error",
+    "signature": "0x7e68caf5"
+  },
+  {
+    "inputs": [],
+    "name": "ErrPoolNotConnectedToMarket",
+    "type": "error",
+    "signature": "0x87d5a422"
+  },
+  {
+    "inputs": [],
+    "name": "ErrProductClosed",
+    "type": "error",
+    "signature": "0x0e2d8f44"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "tokenFrom",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "tokenTo",
+        "type": "address"
+      }
+    ],
+    "name": "ErrRateNotExists",
+    "type": "error",
+    "signature": "0x21400456"
+  },
+  {
+    "inputs": [],
+    "name": "ErrSystemClosed",
+    "type": "error",
+    "signature": "0x11768bc7"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "enum IRiskPoolsControllerStorageModel.SystemStatus",
+        "name": "",
+        "type": "uint8"
+      }
+    ],
+    "name": "ErrSystemStatus",
+    "type": "error",
+    "signature": "0x5ca82806"
+  },
+  {
+    "inputs": [],
+    "name": "ErrUnknownRiskPool",
+    "type": "error",
+    "signature": "0x65d6665f"
+  },
+  {
+    "inputs": [],
+    "name": "ErrWaitingPeriod",
+    "type": "error",
+    "signature": "0x4f41a3b4"
+  },
+  {
+    "inputs": [],
+    "name": "ErrZeroAmount",
+    "type": "error",
+    "signature": "0x608294ac"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "aggregatedPoolId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "premiumRateId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogAggregatedPoolCreated",
+    "type": "event",
+    "signature": "0xc0548278"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "riskTowerLevelId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "aggregatedPoolId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogAggregatedPoolRemoved",
+    "type": "event",
+    "signature": "0xcecf8fa4"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "rewardId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogArchivedRewardClaimed",
+    "type": "event",
+    "signature": "0x0fc58bd3"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "capacityAllowanceLimit",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogCapacityAllowanceLimitUpdated",
+    "type": "event",
+    "signature": "0x1925142a"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "aggregatedPoolId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "cover",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogCoverDistributed",
+    "type": "event",
+    "signature": "0xb3d63713"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "rewardId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "rootHash",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "proofsCid",
+        "type": "string"
+      }
+    ],
+    "name": "LogCoverMiningRewardArchived",
+    "type": "event",
+    "signature": "0xe2061998"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "rewardId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogCoverMiningRewardDeactivated",
+    "type": "event",
+    "signature": "0xc3aac826"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "msgSender",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "key",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "msgData",
+        "type": "bytes"
+      }
+    ],
+    "name": "LogExecuted",
+    "type": "event",
+    "signature": "0x5cd45fa6"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "key",
+        "type": "bytes32"
+      }
+    ],
+    "name": "LogExecutionDeclined",
+    "type": "event",
+    "signature": "0xf02c1115"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "msgSender",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "key",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "msgData",
+        "type": "bytes"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "delayedAt",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogExecutionDelayed",
+    "type": "event",
+    "signature": "0xca7b583b"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "premiumToken",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "premiumFee",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "frontendOperatorFee",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "frontendOperatorFeeRecipient",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "referralFee",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "referralFeeRecipient",
+        "type": "address"
+      }
+    ],
+    "name": "LogFeeAccrued",
+    "type": "event",
+    "signature": "0xe0c11a4a"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "forwardedPayoutRequestId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "capitalToken",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "paidOutAmount",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogForwardedPayoutRequestProcessed",
+    "type": "event",
+    "signature": "0xa97bae30"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "enum IRiskPoolsControllerStorageModel.GovernanceLogType",
+        "name": "logType",
+        "type": "uint8"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "param1",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "param2",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "param3",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "param4",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "param5",
+        "type": "bool"
+      }
+    ],
+    "name": "LogGovernance",
+    "type": "event",
+    "signature": "0xbb5496d4"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "rewardId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogIncreaseRewardAmount",
+    "type": "event",
+    "signature": "0xa0a6ea7a"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "aggregatedPoolId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "capacity",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogJoinMarket",
+    "type": "event",
+    "signature": "0x37fb32ac"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogLiquidation",
+    "type": "event",
+    "signature": "0x81e9b4eb"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "loanRequestId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogLoanApproved",
+    "type": "event",
+    "signature": "0x99f5f822"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "loanData",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "data",
+        "type": "string"
+      }
+    ],
+    "name": "LogLoanDataUpdated",
+    "type": "event",
+    "signature": "0x35e48101"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "loanId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogLoanInterestCharged",
+    "type": "event",
+    "signature": "0x646414ad"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "loanId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "premiumTokenAmount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "chunkIndex",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogLoanInterestPaid",
+    "type": "event",
+    "signature": "0x8cb98260"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "loanId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "repaidPremiumTokenAmount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "repaidCapitalTokenAmount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "chunkIndex",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogLoanPrincipalRepaid",
+    "type": "event",
+    "signature": "0xbb015863"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "loanRequestId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogLoanRequestClosed",
+    "type": "event",
+    "signature": "0x50a8bf21"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "loanRequestId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogLoanRequestDeclined",
+    "type": "event",
+    "signature": "0x0273bbb5"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "loanRequestId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogLoanRequestFullfiled",
+    "type": "event",
+    "signature": "0x2e52f504"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "loanRequestId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "minAmount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "maxPremiumRatePerSec",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "receiveOnApprove",
+        "type": "bool"
+      }
+    ],
+    "name": "LogLoanRequestModified",
+    "type": "event",
+    "signature": "0xcac99497"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "loanRequestId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "minAmount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "maxPremiumRatePerSec",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "receiveOnApprove",
+        "type": "bool"
+      }
+    ],
+    "name": "LogLoanRequested",
+    "type": "event",
+    "signature": "0x18dce24e"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "loanId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "assetTokenAmount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "capitalTokenAmount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "premiumRatePerSec",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogLoanTransferred",
+    "type": "event",
+    "signature": "0x1504072c"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "capacityAllowance",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogMarketCapacityAllowanceUpdated",
+    "type": "event",
+    "signature": "0x10833b5a"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "capacityLimit",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogMarketCapacityLimitUpdated",
+    "type": "event",
+    "signature": "0x980d128f"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "addregatedPoolId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "total",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "premium",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "governanceFee",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "productOperatorFee",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "marketOparatorFee",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogMarketCharge",
+    "type": "event",
+    "signature": "0xc2f55e50"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "incentiveFee",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogMarketIncentiveFeeUpdated",
+    "type": "event",
+    "signature": "0x34103450"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "allolistId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogMarketPolicyBuyerAllowlistIdChanged",
+    "type": "event",
+    "signature": "0x59babf8c"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "capacityLimit",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogMarketRiskPoolCapacityLimitUpdated",
+    "type": "event",
+    "signature": "0x04adf15e"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "enabled",
+        "type": "bool"
+      }
+    ],
+    "name": "LogMarketStatusChanged",
+    "type": "event",
+    "signature": "0x5604aa2f"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "levelId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogNewLevel",
+    "type": "event",
+    "signature": "0x43fdf876"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogNewMarketCreated",
+    "type": "event",
+    "signature": "0x1f7e7d50"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "enum IRiskPoolsControllerStorageModel.MarketStatus",
+        "name": "status",
+        "type": "uint8"
+      }
+    ],
+    "name": "LogNewMarketStatus",
+    "type": "event",
+    "signature": "0x3a713711"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogNewPolicy",
+    "type": "event",
+    "signature": "0xabc3cbaa"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogNewProduct",
+    "type": "event",
+    "signature": "0xb15cde5e"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "enum IRiskPoolsControllerStorageModel.ProductStatus",
+        "name": "status",
+        "type": "uint8"
+      }
+    ],
+    "name": "LogNewProductStatus",
+    "type": "event",
+    "signature": "0xcac0fb4d"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "rewardId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogNewReward",
+    "type": "event",
+    "signature": "0x317fe3d2"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "enum IRiskPoolsControllerStorageModel.SystemStatus",
+        "name": "status",
+        "type": "uint8"
+      }
+    ],
+    "name": "LogNewSystemStatus",
+    "type": "event",
+    "signature": "0xb3be95dc"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "levelIdBefore",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "levelIdToAdd",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogNextLevelAdded",
+    "type": "event",
+    "signature": "0x91709785"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "levelIdToRemove",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "levelIdBefore_",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "nextLevelId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogNextLevelRemoved",
+    "type": "event",
+    "signature": "0x48cc2883"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "assetToken",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogPaidOut",
+    "type": "event",
+    "signature": "0x663f7d4b"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "capitalToken",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "paidoutAmount",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogPayout",
+    "type": "event",
+    "signature": "0x3359ed2d"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "permissionId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "receiver",
+        "type": "address"
+      }
+    ],
+    "name": "LogPermissionTokenIssued",
+    "type": "event",
+    "signature": "0x76d5d221"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "permissionId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogPermissionTokenRevoked",
+    "type": "event",
+    "signature": "0x28689303"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "cover",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogPolicyCoverChanged",
+    "type": "event",
+    "signature": "0x57921e03"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "operator",
+        "type": "address"
+      }
+    ],
+    "name": "LogPolicyCoverDelegationOperatorUpdated",
+    "type": "event",
+    "signature": "0x946852a1"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "rootHash",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "integrationNumber",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogPolicyCoverDelegationUpdated",
+    "type": "event",
+    "signature": "0xe28ed384"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "premiumFeeDeposit",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "frontendOperatorFeeDeposit",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "referralFeeDeposit",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogPolicyDeposit",
+    "type": "event",
+    "signature": "0x8464b27d"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "withdrawnPremiumFeeDeposit",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "withdrawnFrontendOperatorFeeDeposit",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "withdrawnReferralFeeDeposit",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogPolicyWithdraw",
+    "type": "event",
+    "signature": "0xc6c36e5b"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "pool",
+        "type": "address"
+      }
+    ],
+    "name": "LogPoolAddedToMarket",
+    "type": "event",
+    "signature": "0xb86f8cfd"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "charge",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogPremiumEarned",
+    "type": "event",
+    "signature": "0x0cf06f5a"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "premiumRateId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogPremiumRateCreated",
+    "type": "event",
+    "signature": "0x9c761a6f"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "enum IRiskPoolsControllerStorageModel.ProductOperatorLogType",
+        "name": "logType",
+        "type": "uint8"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "param1",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "param2",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogProductChanged",
+    "type": "event",
+    "signature": "0x2e8aff3c"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "aggregatedPoolId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "prevAggregatedPoolId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "pool",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "totalAggregatedPoolCapacity",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "riskPoolCapacity",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogRebalance",
+    "type": "event",
+    "signature": "0xf19adfdf"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "rewardId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "rewardAmount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogRewardClaimed",
+    "type": "event",
+    "signature": "0xb8730f7c"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "aggregatedPoolId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      }
+    ],
+    "name": "LogRiskPoolAddedToAggregatedPool",
+    "type": "event",
+    "signature": "0x8111e629"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "levelId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      }
+    ],
+    "name": "LogRiskPoolAddedToLevel",
+    "type": "event",
+    "signature": "0xe10cb770"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "aggregatedPoolId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      }
+    ],
+    "name": "LogRiskPoolRemovedFromAggregatedPool",
+    "type": "event",
+    "signature": "0x57e61ec8"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "levelId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      }
+    ],
+    "name": "LogRiskPoolRemovedFromLevel",
+    "type": "event",
+    "signature": "0x123eaccf"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "riskTowerLevelId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogRiskTowerLevelCreated",
+    "type": "event",
+    "signature": "0x4bff4dbd"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "priorRiskTowerLevel",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "riskTowerLevelId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogRiskTowerLevelCreated",
+    "type": "event",
+    "signature": "0x973572a4"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "priorRiskTowerLevel",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "riskTowerLevelId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogRiskTowerLevelRemoved",
+    "type": "event",
+    "signature": "0xbbbe15f8"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "insuredToken",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "insuredTokenSwapped",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "capitalToken",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "marketCapitalTokenCoverSwapped",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogSwap",
+    "type": "event",
+    "signature": "0x0c85b836"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "pool",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "insuredToken",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "insuredTokenSwappedAmount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "assetToken",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "assetTokenSwappedAmount",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogSwapped",
+    "type": "event",
+    "signature": "0xc470c4d9"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "delegate",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogWithdrawAccruedMarketFee",
+    "type": "event",
+    "signature": "0x0fcabbdc"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "requester",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogWithdrawFee",
+    "type": "event",
+    "signature": "0xa3fc3bfe"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      }
+    ],
+    "name": "accrueFees",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x577d3344"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "policyIds",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "accrueFeesBatch",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xdcc87fca"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      }
+    ],
+    "name": "accruedFees",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x4efe3245"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "aggregatedPoolId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      }
+    ],
+    "name": "accruedPremiumAtAggregatedPool",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xeee87795"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "index",
+        "type": "uint256"
+      }
+    ],
+    "name": "activeRewardsIds",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "rewardId",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xc0276200"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "actualCover",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "actualCover",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tailAggregatedPoolId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tailCover",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "premiumRatePerSec",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x87475580"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "aggregatedPoolId",
+        "type": "uint256"
+      }
+    ],
+    "name": "aggregatedPoolInfo",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "totalCapacity",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "premiumRatePerSec",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "nextAggregatedPoolId",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x589d584a"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "aggregatedPoolId",
+        "type": "uint256"
+      }
+    ],
+    "name": "aggregatedPools",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "totalCapacity",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "premiumAccumulator",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "premiumBalance",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "nextAggregatedPoolId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "prevAggregatedPoolId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "premiumRatePerSec",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xeb50ccf3"
+  },
+  {
+    "inputs": [],
+    "name": "allowanceManager",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xc4b1e4fb"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "depositAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "desiredCover",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxRate",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "frontendOperator",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "referral",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "details",
+        "type": "string"
+      }
+    ],
+    "name": "applyForPolicy",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xd765eeb3"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "marketIds_",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "depositAmounts_",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "desiredCovers_",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "string[]",
+        "name": "details_",
+        "type": "string[]"
+      },
+      {
+        "internalType": "address",
+        "name": "frontendOperator_",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "referral_",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "recipient_",
+        "type": "address"
+      }
+    ],
+    "name": "applyForPolicyInBatch",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x14d81fba"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "rewardId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "rootHash",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "string",
+        "name": "proofsCid",
+        "type": "string"
+      }
+    ],
+    "name": "archiveCoverMiningReward",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xb8f5b868"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "rewardId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      }
+    ],
+    "name": "archivedRewardClaimed",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xdfab5fb7"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      }
+    ],
+    "name": "bid",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "minPremiumRatePerSec",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxPremiumRatePerSec",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minCoverBuffer",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxCoverBuffer",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "aggregatedPoolId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxCapacityLimit",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "marketCapacityLimit",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "capacityAllowance",
+            "type": "uint256"
+          },
+          {
+            "internalType": "enum IRiskPoolsControllerStorageModel.BidOptimization",
+            "name": "bidOptimization",
+            "type": "uint8"
+          }
+        ],
+        "internalType": "struct IRiskPoolsControllerStorageModel.Bid",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x9f04996d"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "aggregatedPoolId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "cover",
+        "type": "uint256"
+      }
+    ],
+    "name": "calculateCharge",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xd2c67d1e"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "capitalToken",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x531bd25f"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "desiredCover",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "permissionId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "depositAmount",
+        "type": "uint256"
+      }
+    ],
+    "name": "changePolicyCover",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xdc4290f0"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      }
+    ],
+    "name": "checkSwapFeasibility",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "err",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "insuredToken",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxInsuredTokenAmountToSwap",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x3f5858d7"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      }
+    ],
+    "name": "claimAllRewards",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x7ebd739f"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "rewardId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32[]",
+        "name": "proofs",
+        "type": "bytes32[]"
+      }
+    ],
+    "name": "claimArchivedReward",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xf3b0b1e4"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "rewardId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      }
+    ],
+    "name": "claimReward",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x86bb8f37"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "from",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amountIn",
+        "type": "uint256"
+      }
+    ],
+    "name": "conversionQuote",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "amountOut",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x1f67d6f2"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "coverAdjusterOracles",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xc5eea1a1"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "startTime",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "duration",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "cid",
+        "type": "string"
+      }
+    ],
+    "name": "createCoverMiningReward",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xe960dad6"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "productId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "policyBuyerAllowlistId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "policyBuyerAllowanceListId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "marketOperatorIncentiveFee",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "settlementDiscount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxPremiumRatePerSec",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bidStepPremiumRatePerSec",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxAggregatedPoolSlots",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tailKink",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tailJumpPremiumRatePerSec",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "premiumToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "capitalToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "insuredToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "operator",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "outflowProcessor",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "details",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "data",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct ICreateMarketImpl.CreateMarketParams",
+        "name": "params",
+        "type": "tuple"
+      }
+    ],
+    "name": "createMarket",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x7495d9fa"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "claimProcessor",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "defaultPremiumToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "defaultCapitalToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "defaultCoverAdjusterOracle",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "defaultRatesOracle",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "marketCreationFeeToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "outflowProcessor",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "operator",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "marketCreationFee",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "productOperatorIncentiveFee",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxMarketOperatorIncentiveFee",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "withdrawDelay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "withdrawRequestExpiration",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "waitingPeriod",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "marketCreatorsListId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "enum IRiskPoolsControllerStorageModel.SettlementType",
+            "name": "settlement",
+            "type": "uint8"
+          },
+          {
+            "internalType": "string",
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "wording",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "details",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "data",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct IProductCreatorImpl.CreateProductParams",
+        "name": "params_",
+        "type": "tuple"
+      }
+    ],
+    "name": "createProduct",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xe63cd857"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      }
+    ],
+    "name": "cumulatedPremium",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xf936941c"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "index",
+        "type": "uint256"
+      }
+    ],
+    "name": "deactivateCoverMiningReward",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x9e892f50"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "key",
+        "type": "bytes32"
+      }
+    ],
+    "name": "declineExecution",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x54680259"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "key",
+        "type": "bytes32"
+      }
+    ],
+    "name": "delayedExecutions",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "delayedAt",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "dataHash",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x96cc45ef"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "pool",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "receiver",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "minShares",
+        "type": "uint256"
+      }
+    ],
+    "name": "deposit",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x90d25074"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "depositAmount",
+        "type": "uint256"
+      }
+    ],
+    "name": "depositPolicy",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "premiumFeeDeposit",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "frontendOperatorFeeDeposit",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "referralFeeDeposit",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x0d1a2300"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "coverAdjusterOracle",
+        "type": "address"
+      }
+    ],
+    "name": "deregisterCoverAdjusterOracle",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x1bd5f042"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "exchangeRateOracle",
+        "type": "address"
+      }
+    ],
+    "name": "deregisterExchangeRateOracle",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xdb155318"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "frontendOperator",
+        "type": "address"
+      }
+    ],
+    "name": "disableFrontendOperator",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xd97259b1"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "distributeCover",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "tailAggregatedPoolId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tailCover",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x53e2f5a0"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "earnPremium",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "totalCharge",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x9a1628c2"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "rewardId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      }
+    ],
+    "name": "earned",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x20af63a0"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "frontendOperator",
+        "type": "address"
+      }
+    ],
+    "name": "enableFrontendOperator",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x406b7e9d"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "exchangeRateOracles",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x078df67d"
+  },
+  {
+    "inputs": [],
+    "name": "executionDelay",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x8b257989"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "fees",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "governanceIncentiveFee",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "marketOperatorIncentiveFee",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "productOperatorIncentiveFee",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x4acc79ed"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "frontendOperator",
+        "type": "address"
+      }
+    ],
+    "name": "frontendOperators",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "feeRecipient",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "frontendOperatorFee",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "referralFee",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "policyBuyerReferralBonus",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "meta",
+        "type": "string"
+      },
+      {
+        "internalType": "bool",
+        "name": "enabled",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x1c30bf9f"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getActiveRewards",
+    "outputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "",
+        "type": "uint256[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x5c47eee2"
+  },
+  {
+    "inputs": [],
+    "name": "governanceIncentiveFee",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x783a72a8"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "headAggregatedPoolId",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xdfb4aa06"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      }
+    ],
+    "name": "healthStatus",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xde791afd"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "rewardId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "increaseRewardAmount",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xfe7e9bd3"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "receiver",
+        "type": "address"
+      }
+    ],
+    "name": "issuePermission",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xf4a67de0"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxCapacityLimit",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "minPremiumRatePerSec",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxPremiumRatePerSec",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "minCoverBuffer",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxCoverBuffer",
+        "type": "uint256"
+      },
+      {
+        "internalType": "enum IRiskPoolsControllerStorageModel.BidOptimization",
+        "name": "bidOptimization",
+        "type": "uint8"
+      }
+    ],
+    "name": "joinMarket",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xfc56fcb2"
+  },
+  {
+    "inputs": [],
+    "name": "lastAggregatedPoolId",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xd8e5da2a"
+  },
+  {
+    "inputs": [],
+    "name": "lastMarketId",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x565eb87c"
+  },
+  {
+    "inputs": [],
+    "name": "lastPoolId",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xa657e579"
+  },
+  {
+    "inputs": [],
+    "name": "lastProductId",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x8dff9f92"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "rewardId",
+        "type": "uint256"
+      }
+    ],
+    "name": "lastTimeRewardApplicable",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xeeca1562"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      }
+    ],
+    "name": "liquidate",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x415f1240"
+  },
+  {
+    "inputs": [],
+    "name": "liquidationGasUsage",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xca240d34"
+  },
+  {
+    "inputs": [],
+    "name": "liquidationIncentive",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x8c765e94"
+  },
+  {
+    "inputs": [],
+    "name": "list",
+    "outputs": [
+      {
+        "internalType": "contract IList",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x0f560cd7"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "loanId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "index",
+        "type": "uint256"
+      }
+    ],
+    "name": "loanChunks",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "premiumRatePerSec",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "borrowedAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "repaidAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "accruedInterest",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "lastUpdateTs",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xc625bf21"
+  },
+  {
+    "inputs": [],
+    "name": "loanInc",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x5b82c842"
+  },
+  {
+    "inputs": [],
+    "name": "loanRequestInc",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xac9fa89a"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "loanRequestId",
+        "type": "uint256"
+      }
+    ],
+    "name": "loanRequests",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "minAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxPremiumRatePerSec",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "approvedAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "filledAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "receiveOnApprove",
+        "type": "bool"
+      },
+      {
+        "internalType": "string",
+        "name": "details",
+        "type": "string"
+      },
+      {
+        "internalType": "enum IRiskPoolsControllerStorageModel.LoanRequestStatus",
+        "name": "status",
+        "type": "uint8"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xd1b332f4"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "loanIn",
+        "type": "uint256"
+      }
+    ],
+    "name": "loans",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "loanRequestId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "borrowedAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "lastUpdateTs",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "governanceIncentiveFee",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "productOperatorIncentiveFee",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "marketOperatorIncentiveFee",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "details",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xe1ec3c68"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      }
+    ],
+    "name": "marketDeposits",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketDeposit",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xc9008fb4"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "marketIsOpened",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x94b7170c"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "marketPayoutAvailable",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x662f6189"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "marketStatus",
+    "outputs": [
+      {
+        "internalType": "enum IRiskPoolsControllerStorageModel.MarketStatus",
+        "name": "",
+        "type": "uint8"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x83ae8e0c"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "marketWithdrawAvailable",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x8b26fc71"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "marketWithdrawLPAvailable",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xd6f13a42"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "marketWithdrawPolicyAvailable",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x8109ec5a"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "markets",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "operator",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "premiumToken",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "capitalToken",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "insuredToken",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "coverAdjusterOracle",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "ratesOracle",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "outflowProcessor",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "details",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "data",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xb1283e77"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "marketsMeta",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "desiredCover",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "waitingPeriod",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "marketOperatorIncentiveFee",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "lastChargeTimestamp",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "settlementDiscount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "withdrawDelay",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "headAggregatedPoolId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tailCover",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "minPremiumRatePerSec",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxPremiumRatePerSec",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "bidStepPremiumRatePerSec",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxAggregatedPoolSlots",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tailKink",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tailJumpPremiumRatePerSec",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x5350a1fd"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "marketsPremiumMulAccumulators",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x0718f841"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      }
+    ],
+    "name": "maxAvailableCapacity",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xcf22e6f6"
+  },
+  {
+    "inputs": [],
+    "name": "maxIterations",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x387f504a"
+  },
+  {
+    "inputs": [],
+    "name": "maxMarketOperatorIncentiveFee",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xc9f6b5e1"
+  },
+  {
+    "inputs": [],
+    "name": "maxProductOperatorIncentiveFee",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xf8432eaa"
+  },
+  {
+    "inputs": [],
+    "name": "maxRiskPoolOperatorFee",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x053198cf"
+  },
+  {
+    "inputs": [],
+    "name": "maxSimultaneousRewards",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x96482454"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "minPolicyDeposit",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xbd16c523"
+  },
+  {
+    "inputs": [],
+    "name": "minPolicyDepositMultiplier",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x6a8b14fa"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "pool",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "receiver",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxAssets",
+        "type": "uint256"
+      }
+    ],
+    "name": "mint",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x3c173a4f"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "a",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "b",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "c",
+        "type": "uint256"
+      }
+    ],
+    "name": "mulDivRoundDown",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xd48c6dfe"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "a",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "b",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "c",
+        "type": "uint256"
+      }
+    ],
+    "name": "mulDivRoundUp",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x2886a33f"
+  },
+  {
+    "inputs": [],
+    "name": "operator",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x570ca735"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "outflowProcessorFactory",
+        "type": "address"
+      }
+    ],
+    "name": "outflowProcessorFactories",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xc1f4f186"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      }
+    ],
+    "name": "ownerOf",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x6352211e"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "frontendOperator",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      }
+    ],
+    "name": "penalizeFrontendOperator",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xb9bf0762"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "permissionId",
+        "type": "uint256"
+      }
+    ],
+    "name": "permissionIdToPolicyId",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x28cf3ff6"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      }
+    ],
+    "name": "policies",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "validUntil",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "coverChanged",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "waitingPeriod",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "frontendOperator",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "frontendOperatorFee",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "referralBonus",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "referral",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "referralFee",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "desiredCover",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "underlyingCover",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "details",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xd3e89483"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      }
+    ],
+    "name": "policiesCoverDelegation",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "operator",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "rootHash",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint256",
+        "name": "integrationNumber",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "data",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x222aff2d"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      }
+    ],
+    "name": "policyActualCover",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xae32a0f6"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      }
+    ],
+    "name": "policyBalance",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xab1dd85b"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "policyIds",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "permissionIds",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "desiredCovers",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "int256[]",
+        "name": "balanceDeltas",
+        "type": "int256[]"
+      }
+    ],
+    "name": "policyBatchUpdate",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xf211c9fd"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "policyBuyerAllowanceListId",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x035fbf80"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "policyBuyerAllowlistId",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x63b1ede3"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      }
+    ],
+    "name": "policyDeposits",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "premiumFeeDeposit",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "frontendOperatorFeeDeposit",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "referralFeeDeposit",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "premiumMulAccumulator",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x113f375b"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      }
+    ],
+    "name": "policyInfo",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "desiredCover",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x576be6c5"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "rewardId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      }
+    ],
+    "name": "policyRewardEarned",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xb2ef19f5"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "rewardId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      }
+    ],
+    "name": "policyRewardPerSharePaid",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x810d02bd"
+  },
+  {
+    "inputs": [],
+    "name": "policyTokenIssuer",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x54ddeb7e"
+  },
+  {
+    "inputs": [],
+    "name": "policyTokenPermissionIssuer",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xa8f40a93"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "poolFactory",
+        "type": "address"
+      }
+    ],
+    "name": "poolFactories",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x88b9cf68"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "pool",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "poolMarketAggregatedPools",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x4e76f1a8"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "pool",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "poolMarketIndexes",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xdc164c23"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "pool",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "index",
+        "type": "uint256"
+      }
+    ],
+    "name": "poolMarkets",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xacfbfe76"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "premiumToken",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x0dba0cd5"
+  },
+  {
+    "inputs": [],
+    "name": "productCreatorsListId",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x6a920277"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      }
+    ],
+    "name": "productIsOpened",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xb2080ca0"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      }
+    ],
+    "name": "products",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "operator",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "claimProcessor",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "outflowProcessor",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "defaultPremiumToken",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "defaultCapitalToken",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "defaultCoverAdjusterOracle",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "defaultRatesOracle",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "marketCreationFeeToken",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x7acc0b20"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      }
+    ],
+    "name": "productsMeta",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketCreationFee",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "productOperatorIncentiveFee",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxMarketOperatorIncentiveFee",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "withdrawDelay",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "withdrawRequestExpiration",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "waitingPeriod",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "marketCreatorsListId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "enum IRiskPoolsControllerStorageModel.SettlementType",
+        "name": "settlement",
+        "type": "uint8"
+      },
+      {
+        "internalType": "enum IRiskPoolsControllerStorageModel.ProductStatus",
+        "name": "status",
+        "type": "uint8"
+      },
+      {
+        "internalType": "string",
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "wording",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "details",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "data",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x7ea35137"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "aggregatedPoolId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      }
+    ],
+    "name": "pullPremiumFromAggregatedPool",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "premiumAmount",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x3c75c888"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "duration",
+        "type": "uint256"
+      },
+      {
+        "internalType": "int256",
+        "name": "marketCoverDelta",
+        "type": "int256"
+      }
+    ],
+    "name": "quote",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "quote",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "desiredMarketCover",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "actualMarketCover",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xfbacbffe"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      }
+    ],
+    "name": "rebalance",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xcbb46832"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "riskPool_",
+        "type": "address"
+      }
+    ],
+    "name": "rebalanceAggregatedPools",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x7ee081fc"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "pool",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "receiver",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "minAssets",
+        "type": "uint256"
+      }
+    ],
+    "name": "redeem",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x4049c1a6"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "frontendOperator",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "depositAmount",
+        "type": "uint256"
+      }
+    ],
+    "name": "referralBonus",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x7677bd15"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "coverAdjusterOracle",
+        "type": "address"
+      }
+    ],
+    "name": "registerCoverAdjusterOracle",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x6d602623"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "exchangeRateOracle",
+        "type": "address"
+      }
+    ],
+    "name": "registerExchangeRateOracle",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x88f2e404"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "frontendOperator",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "feeRecipient",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "frontendOperatorFee",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "referralFee",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "policyBuyerReferralBonus",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "meta",
+        "type": "string"
+      }
+    ],
+    "name": "registerFrontendOperator",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xaccafdc5"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "permissionId",
+        "type": "uint256"
+      }
+    ],
+    "name": "revokePermission",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xd33b3b06"
+  },
+  {
+    "inputs": [],
+    "name": "rewardIdInc",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xab9825b6"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "rewardId",
+        "type": "uint256"
+      }
+    ],
+    "name": "rewardPerShare",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xcdd8d69c"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "rewardId",
+        "type": "uint256"
+      }
+    ],
+    "name": "rewards",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "distributor",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "startTime",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "endTime",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "rate",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "lastUpdateTime",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "rewardPerShareStored",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "deactivated",
+        "type": "bool"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "rootHash",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "string",
+        "name": "sid",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "proofsSid",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xf301af42"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "riskPoolAggregatedPoolAtMarket",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x954f9a7a"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "aggregatedPoolId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      }
+    ],
+    "name": "riskPoolIndexAtAggregatedPool",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xd0060ebc"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "riskPoolMarketIndex",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x3af162cd"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      }
+    ],
+    "name": "riskPoolMarkets",
+    "outputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "",
+        "type": "uint256[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x386a8a53"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      }
+    ],
+    "name": "riskPoolMarketsAreOpened",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x2861c3df"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "aggregatedPoolId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      }
+    ],
+    "name": "riskPoolPremiumAccumulatorAtAggregatedPool",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x8e542b78"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "aggregatedPoolId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      }
+    ],
+    "name": "riskPoolShareAtAggregatedPool",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x4ebcf3a9"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      }
+    ],
+    "name": "riskPoolWithdrawLPAvailable",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xb0e03850"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "aggregatedPoolId",
+        "type": "uint256"
+      }
+    ],
+    "name": "riskPoolsAtAggregatedPool",
+    "outputs": [
+      {
+        "internalType": "address[]",
+        "name": "",
+        "type": "address[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x0f317918"
+  },
+  {
+    "inputs": [],
+    "name": "riskUpdatePoolConnectedCapacityCallback",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x2140b321"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "allowanceManager",
+        "type": "address"
+      }
+    ],
+    "name": "setAllowanceManager",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x1d7c9f32"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "capacityAllowance",
+        "type": "uint256"
+      }
+    ],
+    "name": "setCapacityAllowance",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x195962d6"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "riskPool",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "capacityLimit",
+        "type": "uint256"
+      }
+    ],
+    "name": "setCapacityLimit",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x8b6431a1"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "coverAdjusterOracle",
+        "type": "address"
+      }
+    ],
+    "name": "setCoverAdjusterOracle",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x009562e9"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "operator",
+        "type": "address"
+      }
+    ],
+    "name": "setCoverDelegationOperator",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xd970d572"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "exchangeRateOracle",
+        "type": "address"
+      }
+    ],
+    "name": "setExchangeRateOracle",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x80479fc0"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "executionDelay",
+        "type": "uint256"
+      }
+    ],
+    "name": "setExecutionDelay",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xe4917d9f"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "governanceIncentiveFee",
+        "type": "uint256"
+      }
+    ],
+    "name": "setGovernanceIncentiveFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x5af59a80"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      }
+    ],
+    "name": "setLiquidationGasUsage",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x3242b2cd"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      }
+    ],
+    "name": "setLiquidationIncentive",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xa8431081"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "data",
+        "type": "string"
+      }
+    ],
+    "name": "setMarketData",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x1148ed00"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "details",
+        "type": "string"
+      }
+    ],
+    "name": "setMarketDetails",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xf02c14d4"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "marketOperator",
+        "type": "address"
+      }
+    ],
+    "name": "setMarketOperator",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x40e3117c"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "marketOperatorIncentiveFee",
+        "type": "uint256"
+      }
+    ],
+    "name": "setMarketOperatorIncentiveFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x5016e42c"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "setMarketOwner",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x1c8bbc39"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "allowanceListId",
+        "type": "uint256"
+      }
+    ],
+    "name": "setMarketPolicyBuyerAllowancelistId",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x367f80a5"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "allowlistId",
+        "type": "uint256"
+      }
+    ],
+    "name": "setMarketPolicyBuyerAllowlistId",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xe680b75f"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "enum IRiskPoolsControllerStorageModel.MarketStatus",
+        "name": "status",
+        "type": "uint8"
+      }
+    ],
+    "name": "setMarketStatus",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xb701e101"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "maxMarketOperatorIncentiveFee",
+        "type": "uint256"
+      }
+    ],
+    "name": "setMaxMarketOperatorIncentiveFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x096b0e64"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "maxProductOperatorIncentiveFee",
+        "type": "uint256"
+      }
+    ],
+    "name": "setMaxProductOperatorIncentiveFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xda9b50c0"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      }
+    ],
+    "name": "setMinPolicyDepositMultiplier",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xf6a9a14b"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "operator",
+        "type": "address"
+      }
+    ],
+    "name": "setOperator",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xb3ab15fb"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "outflowProcessorFactory",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "status",
+        "type": "bool"
+      }
+    ],
+    "name": "setOutflowProcessorFactory",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xdc262c3e"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "poolFactory",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "status",
+        "type": "bool"
+      }
+    ],
+    "name": "setPoolFactory",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x805e2a99"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "claimProcessor",
+        "type": "address"
+      }
+    ],
+    "name": "setProductClaimProcessor",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xca50e86b"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "productCreatorsListId",
+        "type": "uint256"
+      }
+    ],
+    "name": "setProductCreatorsListId",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x3eb21315"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "data",
+        "type": "string"
+      }
+    ],
+    "name": "setProductData",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x3d2e3d73"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "capitalToken",
+        "type": "address"
+      }
+    ],
+    "name": "setProductDefaultCapitalToken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xbae18d8a"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "coverAdjusterOracle",
+        "type": "address"
+      }
+    ],
+    "name": "setProductDefaultCoverAdjusterOracle",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x81cec1f2"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "premiumToken",
+        "type": "address"
+      }
+    ],
+    "name": "setProductDefaultPremiumToken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x49028dcf"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "ratesOracle",
+        "type": "address"
+      }
+    ],
+    "name": "setProductDefaultRatesOracle",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xb38f319f"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "details",
+        "type": "string"
+      }
+    ],
+    "name": "setProductDetails",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x509bf65f"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "marketCreationFee",
+        "type": "uint256"
+      }
+    ],
+    "name": "setProductMarketCreationFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x21a15ba2"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "marketCreationFeeToken",
+        "type": "address"
+      }
+    ],
+    "name": "setProductMarketCreationFeeToken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x1a2f42b7"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "marketCreatorsAllowlistId",
+        "type": "uint256"
+      }
+    ],
+    "name": "setProductMarketCreatorsAllowlistId",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xe3c936e9"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxMarketOperatorIncentiveFee",
+        "type": "uint256"
+      }
+    ],
+    "name": "setProductMaxMarketOperatorIncentiveFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x7be9eb69"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "productOperator",
+        "type": "address"
+      }
+    ],
+    "name": "setProductOperator",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x5455193f"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "productOperatorIncentiveFee",
+        "type": "uint256"
+      }
+    ],
+    "name": "setProductOperatorIncentiveFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xae177e5d"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "outflowProcessor",
+        "type": "address"
+      }
+    ],
+    "name": "setProductOutflowProcessor",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x7d82a97c"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "setProductOwner",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x6d6ad09f"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "enum IRiskPoolsControllerStorageModel.ProductStatus",
+        "name": "status_",
+        "type": "uint8"
+      }
+    ],
+    "name": "setProductStatus",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x846660f4"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "waitingPeriod",
+        "type": "uint256"
+      }
+    ],
+    "name": "setProductWaitingPeriod",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x241c47ec"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "withdrawDelay",
+        "type": "uint256"
+      }
+    ],
+    "name": "setProductWithdrawDelay",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x2134ebd1"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "withdrawRequestExpiration",
+        "type": "uint256"
+      }
+    ],
+    "name": "setProductWithdrawRequestExpiration",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xb0ab3a48"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "wording",
+        "type": "string"
+      }
+    ],
+    "name": "setProductWording",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xc67fdaa3"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      }
+    ],
+    "name": "setSettlementDiscount",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xf64dba52"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      }
+    ],
+    "name": "setSolvencyMultiplier",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xe695ecb3"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "enum IRiskPoolsControllerStorageModel.SystemStatus",
+        "name": "status",
+        "type": "uint8"
+      }
+    ],
+    "name": "setSystemStatus",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x63eba15d"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "treasury",
+        "type": "address"
+      }
+    ],
+    "name": "setTreasury",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xf0f44260"
+  },
+  {
+    "inputs": [],
+    "name": "solvencyMultiplier",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x855a5d55"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "solvencyRequirement",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x3734913c"
+  },
+  {
+    "inputs": [],
+    "name": "systemIsOpened",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x94a47102"
+  },
+  {
+    "inputs": [],
+    "name": "systemStatus",
+    "outputs": [
+      {
+        "internalType": "enum IRiskPoolsControllerStorageModel.SystemStatus",
+        "name": "",
+        "type": "uint8"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x64cb907c"
+  },
+  {
+    "inputs": [],
+    "name": "treasury",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x61d027b3"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "policyId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "rootHash",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "uint256",
+            "name": "integrationNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "data",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct IApplyForPolicyImpl.UpdateCoverDelegationParams",
+        "name": "params",
+        "type": "tuple"
+      }
+    ],
+    "name": "updateCoverDelegation",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xa7b255c2"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "policyId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "rootHash",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "uint256",
+            "name": "integrationNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "data",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct IApplyForPolicyImpl.UpdateCoverDelegationParams",
+        "name": "params",
+        "type": "tuple"
+      },
+      {
+        "internalType": "uint256",
+        "name": "timestamp",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes",
+        "name": "signature",
+        "type": "bytes"
+      }
+    ],
+    "name": "updateCoverDelegationWithSignature",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x85c871f7"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "frontendOperatorFee",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "referralFee",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "policyBuyerReferralBonus",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "meta",
+        "type": "string"
+      }
+    ],
+    "name": "updateFrontendOperator",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xd7287009"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "marketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      }
+    ],
+    "name": "updateRewards",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x97e50818"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "rewardId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32[]",
+        "name": "proofs",
+        "type": "bytes32[]"
+      }
+    ],
+    "name": "verifyArchivedRewardClaim",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x773a77af"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32[]",
+        "name": "proofs",
+        "type": "bytes32[]"
+      }
+    ],
+    "name": "verifyCoverDelegation",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xcd5b43a9"
+  },
+  {
+    "inputs": [],
+    "name": "wallet",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x521eb273"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "pool",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "receiver",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxShares",
+        "type": "uint256"
+      }
+    ],
+    "name": "withdraw",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x5501f1c6"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      }
+    ],
+    "name": "withdrawAccruedMarketFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x15b242b4"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      }
+    ],
+    "name": "withdrawAllAndDeactivate",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x249f512e"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      }
+    ],
+    "name": "withdrawFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x1ac3ddeb"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address[]",
+        "name": "erc20",
+        "type": "address[]"
+      }
+    ],
+    "name": "withdrawFeeBatch",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x004cc6e4"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "policyId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "withdrawPolicy",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xa3a63d85"
+  }
+]

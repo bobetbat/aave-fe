@@ -1,0 +1,34 @@
+query markets($productIds: [String]!) {
+  markets(where: { productId_in: $productIds }) {
+    id
+    marketId
+    title
+    operator
+    aggregatedPools {
+      id
+      poolList
+    }
+    productId
+    product {
+      id
+      title
+      wording
+      data
+      details
+    }
+    desiredCover
+    capitalToken
+    premiumToken
+    policyBuyerAllowListId
+    details
+    outflowProcessor
+  }
+
+  _meta {
+    block {
+      number
+      timestamp
+      hash
+    }
+  }
+}

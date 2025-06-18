@@ -1,0 +1,27 @@
+query policies($productIds: [String]!, $marketIds: [String]!) {
+  policies(where: { productId_in: $productIds, marketId_in: $marketIds }) {
+    id
+    productId
+    marketId
+    policyId
+    owner
+    issuer
+    balance
+    coverage
+    premiumDeposit
+    underlyingCover
+    market {
+      capitalToken
+      premiumToken
+      outflowProcessor
+    }
+  }
+
+  _meta {
+    block {
+      number
+      timestamp
+      hash
+    }
+  }
+}

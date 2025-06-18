@@ -1,0 +1,19 @@
+query frontendOperator($id: ID!) {
+  frontendOperator(id: $id) {
+    id
+    feeRecipient
+    frontendOperatorFee
+    referralFee
+    policyBuyerReferralBonus
+    meta
+    isActive
+  }
+
+  _meta {
+    block {
+      number
+      timestamp
+      hash
+    }
+  }
+}

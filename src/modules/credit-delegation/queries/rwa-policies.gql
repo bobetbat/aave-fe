@@ -1,0 +1,26 @@
+query rwaPolicies($productIds: [String]!, $owner: String!) {
+  rwaPolicies: policies(where: { productId_in: $productIds, owner: $owner }) {
+    id
+    productId
+    marketId
+    policyId
+    owner
+    issuer
+    balance
+    coverage
+    premiumDeposit
+    underlyingCover
+    market {
+      capitalToken
+      premiumToken
+    }
+  }
+
+  _meta {
+    block {
+      number
+      timestamp
+      hash
+    }
+  }
+}

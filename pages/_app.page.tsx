@@ -18,6 +18,7 @@ import { GasStationProvider } from 'src/components/transactions/GasStation/GasSt
 import { AppDataProvider } from 'src/hooks/app-data-provider/useAppDataProvider';
 import { ModalContextProvider } from 'src/hooks/useModal';
 import { Web3ContextProvider } from 'src/libs/web3-data-provider/Web3Provider';
+import { CreditDelegationProvider } from 'src/modules/credit-delegation/CreditDelegationContext';
 import { useRootStore } from 'src/store/root';
 import { SharedDependenciesProvider } from 'src/ui-config/SharedDependenciesProvider';
 import { wagmiConfig } from 'src/ui-config/wagmiConfig';
@@ -150,24 +151,26 @@ export default function MyApp(props: MyAppProps) {
                       <ModalContextProvider>
                         <SharedDependenciesProvider>
                           <AppDataProvider>
-                            <GasStationProvider>
-                              {getLayout(<Component {...pageProps} />)}
-                              <SupplyModal />
-                              <WithdrawModal />
-                              <BorrowModal />
-                              <RepayModal />
-                              <CollateralChangeModal />
-                              <DebtSwitchModal />
-                              <ClaimRewardsModal />
-                              <EmodeModal />
-                              <SwapModal />
-                              <FaucetModal />
-                              <TransactionEventHandler />
-                              <SwitchModal />
-                              <StakingMigrateModal />
-                              <BridgeModal />
-                              <ReadOnlyModal />
-                            </GasStationProvider>
+                            <CreditDelegationProvider>
+                              <GasStationProvider>
+                                {getLayout(<Component {...pageProps} />)}
+                                <SupplyModal />
+                                <WithdrawModal />
+                                <BorrowModal />
+                                <RepayModal />
+                                <CollateralChangeModal />
+                                <DebtSwitchModal />
+                                <ClaimRewardsModal />
+                                <EmodeModal />
+                                <SwapModal />
+                                <FaucetModal />
+                                <TransactionEventHandler />
+                                <SwitchModal />
+                                <StakingMigrateModal />
+                                <BridgeModal />
+                                <ReadOnlyModal />
+                              </GasStationProvider>
+                            </CreditDelegationProvider>
                           </AppDataProvider>
                         </SharedDependenciesProvider>
                       </ModalContextProvider>

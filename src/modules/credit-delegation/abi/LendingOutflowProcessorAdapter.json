@@ -1,0 +1,987 @@
+[
+  {
+    "inputs": [],
+    "name": "ErrDivisionByZero",
+    "type": "error",
+    "signature": "0xf265c2bb"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInitialized",
+    "type": "error",
+    "signature": "0x30398bc4"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "currentAllowance",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrInsufficientAllowance",
+    "type": "error",
+    "signature": "0x120120c4"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "currentBalance",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrInsufficientBalance",
+    "type": "error",
+    "signature": "0x483b38f2"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidAddress",
+    "type": "error",
+    "signature": "0xd1d16137"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidAmount",
+    "type": "error",
+    "signature": "0xb3726016"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidLoanId",
+    "type": "error",
+    "signature": "0xbfcc7968"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidRecipient",
+    "type": "error",
+    "signature": "0x2a7c2a7e"
+  },
+  {
+    "inputs": [],
+    "name": "ErrNotAllowed",
+    "type": "error",
+    "signature": "0x37e82d34"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "lockedUntil",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrTimelocked",
+    "type": "error",
+    "signature": "0x9ec65050"
+  },
+  {
+    "inputs": [],
+    "name": "ErrTransferFailed",
+    "type": "error",
+    "signature": "0x9a7058e1"
+  },
+  {
+    "inputs": [],
+    "name": "ErrTransferFromFailed",
+    "type": "error",
+    "signature": "0xca3772fc"
+  },
+  {
+    "inputs": [],
+    "name": "ErrUnderOverflow",
+    "type": "error",
+    "signature": "0x6dd73444"
+  },
+  {
+    "inputs": [],
+    "name": "ErrZeroAssetAmount",
+    "type": "error",
+    "signature": "0xfabf93ba"
+  },
+  {
+    "inputs": [],
+    "name": "ErrZeroCapacity",
+    "type": "error",
+    "signature": "0x7a122c86"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "spender",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      }
+    ],
+    "name": "Approval",
+    "type": "event",
+    "signature": "0x8c5be1e5"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "loanId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "rate",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "mintedAmount",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogBorrowed",
+    "type": "event",
+    "signature": "0xd645d76e"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "asset",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "outflowProcessor",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "timelock",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogInitialized",
+    "type": "event",
+    "signature": "0xba508fac"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "loanId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "duration",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogInterestPaid",
+    "type": "event",
+    "signature": "0xdba43cc1"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "loanId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogPrincipalRepaid",
+    "type": "event",
+    "signature": "0x0ddb4277"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "sharesAmount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "principal",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "interest",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "operatorFee",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "lockedAmount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "lockedUntil",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogWithdraw",
+    "type": "event",
+    "signature": "0x16411946"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "operatorFeeRecipient",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogWithdrawOperatorFee",
+    "type": "event",
+    "signature": "0xca0a9a95"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "from",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      }
+    ],
+    "name": "Transfer",
+    "type": "event",
+    "signature": "0xddf252ad"
+  },
+  {
+    "inputs": [],
+    "name": "accruedInterest",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x45fe329f"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner_",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "spender_",
+        "type": "address"
+      }
+    ],
+    "name": "allowance",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xdd62ed3e"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "spender_",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount_",
+        "type": "uint256"
+      }
+    ],
+    "name": "approve",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x095ea7b3"
+  },
+  {
+    "inputs": [],
+    "name": "asset",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x38d52e0f"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account_",
+        "type": "address"
+      }
+    ],
+    "name": "balanceOf",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x70a08231"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "amount_",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "rate_",
+        "type": "uint256"
+      }
+    ],
+    "name": "borrow",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "id_",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "mintAmount_",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x0ecbcdab"
+  },
+  {
+    "inputs": [],
+    "name": "factory",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xc45a0155"
+  },
+  {
+    "inputs": [],
+    "name": "fees",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x9af1d35a"
+  },
+  {
+    "inputs": [],
+    "name": "implementation",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x5c60da1b"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "pool_",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "outflowProcessor_",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "timelock_",
+        "type": "uint256"
+      }
+    ],
+    "name": "initialize",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x1794bb3c"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "loanId_",
+        "type": "uint256"
+      }
+    ],
+    "name": "interestDebt",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xb270f94e"
+  },
+  {
+    "inputs": [],
+    "name": "lastLoanId",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x68be92b4"
+  },
+  {
+    "inputs": [],
+    "name": "lastUpdateTs",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xb0b260ab"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "loans",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "borrowedPrincipal",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "repaidPrincipal",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "paidInterest",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "accruedInterest",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "rate",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "lastUpdateTs",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xe1ec3c68"
+  },
+  {
+    "inputs": [],
+    "name": "outflowProcessor",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xdb4e2c94"
+  },
+  {
+    "inputs": [],
+    "name": "paidInterest",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x96e4547c"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "loanId_",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount_",
+        "type": "uint256"
+      }
+    ],
+    "name": "payInterest",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xff4ba23d"
+  },
+  {
+    "inputs": [],
+    "name": "pool",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x16f0115b"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "loanId_",
+        "type": "uint256"
+      }
+    ],
+    "name": "principalDebt",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x7dd2981d"
+  },
+  {
+    "inputs": [],
+    "name": "repaidPrincipal",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xdc12a6e6"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "loanId_",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount_",
+        "type": "uint256"
+      }
+    ],
+    "name": "repayPrincipal",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "repaidAmount_",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xa3a826ec"
+  },
+  {
+    "inputs": [],
+    "name": "timelockDuration",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x2bbca157"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "timelocks",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "lockedUntilTs",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x1369a927"
+  },
+  {
+    "inputs": [],
+    "name": "totalAssets",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x01e1d114"
+  },
+  {
+    "inputs": [],
+    "name": "totalBorrowedPrincipal",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xa969ee40"
+  },
+  {
+    "inputs": [],
+    "name": "totalSupply",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x18160ddd"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "recipient_",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount_",
+        "type": "uint256"
+      }
+    ],
+    "name": "transfer",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xa9059cbb"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "sender_",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "recipient_",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount_",
+        "type": "uint256"
+      }
+    ],
+    "name": "transferFrom",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x23b872dd"
+  },
+  {
+    "inputs": [],
+    "name": "unpaidInterest",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xda09b1a0"
+  },
+  {
+    "inputs": [],
+    "name": "weightedRate",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xf4a1575c"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "amount_",
+        "type": "uint256"
+      }
+    ],
+    "name": "withdraw",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "assetAmount_",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "lockedAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "lockedUntilTs_",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x2e1a7d4d"
+  },
+  {
+    "inputs": [],
+    "name": "withdrawOperatorFee",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "amount_",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xa52c8a8b"
+  }
+]

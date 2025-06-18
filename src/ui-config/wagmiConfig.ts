@@ -44,6 +44,7 @@ if (FORK_ENABLED) {
   prodChains = [forkChain, ...prodChains];
 }
 
+// walletConnectId
 const defaultConfig = {
   walletConnectProjectId: process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID as string,
   appName: 'Aave',

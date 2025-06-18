@@ -1,0 +1,16 @@
+query RwaMarkets($insuredToken: String!) {
+  markets(where: { insuredToken: $insuredToken }) {
+    insuredToken
+    id
+    marketId
+    productId
+  }
+
+  _meta {
+    block {
+      number
+      timestamp
+      hash
+    }
+  }
+}

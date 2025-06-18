@@ -1,0 +1,20 @@
+query loanChunks($loanIds: [String]!) {
+  loanChunks(where: { loanId_in: $loanIds }) {
+    id
+    loanId
+    poolId
+    rate
+    borrowedAmount
+    lastUpdateTs
+    accruedInterest
+    repaidPrincipal
+  }
+
+  _meta {
+    block {
+      number
+      timestamp
+      hash
+    }
+  }
+}

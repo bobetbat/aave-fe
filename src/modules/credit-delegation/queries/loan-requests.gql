@@ -1,0 +1,38 @@
+query loans($policyIds: [String]!, $recipient: String!) {
+  loanRequests(where: { or: [{ policyId_in: $policyIds }, { recipient: $recipient }] }) {
+    id
+    policyId
+    amount
+    status
+    minAmount
+    approvedAmount
+    filledAmount
+    # maxPremiumRatePerSec
+    # receiveOnApprove
+    recipient
+    createdAt
+
+    loans {
+      id
+      loanRequestId
+      policyId
+      data
+      borrowedAmount
+      # governanceIncentiveFee
+      # lastUpdateTs
+      # marketOperatorIncentiveFee
+      # productOperatorIncentiveFee
+      interestCharged
+      # interestRepaid
+      createdAt
+    }
+  }
+
+  _meta {
+    block {
+      number
+      timestamp
+      hash
+    }
+  }
+}

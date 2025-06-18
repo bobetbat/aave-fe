@@ -1,0 +1,295 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "riskPoolsController_",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "list_",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "outflowProcessorImplementation_",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "adapterImplementation_",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "outflowProcessorCreatorsListId_",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidAddress",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidListID",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidTimelock",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ErrNotAllowed",
+    "type": "error"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "outflowProcessor",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "approver",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "asset",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "timelock",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogOutflowProcessor",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "adapter",
+        "type": "address"
+      }
+    ],
+    "name": "LogOutflowProcessorAdapter",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "MIN_TIMELOCK",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "pool_",
+        "type": "address"
+      }
+    ],
+    "name": "adapter",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "adapter_",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "exists_",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "adapterImplementation",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "adapters",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "approver_",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "asset_",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "timelock_",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "data_",
+        "type": "string"
+      }
+    ],
+    "name": "createOutflowProcessor",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "outflowProcessor_",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "pool_",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "timelock_",
+        "type": "uint256"
+      }
+    ],
+    "name": "createOutflowProcessorAdapter",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "adapter_",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "list",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "outflowProcessorCreatorsListId",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "outflowProcessorImplementation",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "outflowProcessors",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "riskPoolsController",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

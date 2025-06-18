@@ -1,0 +1,50 @@
+query main($productIds: [String]!, $managerIds: [String]!, $owner: String!) {
+  markets(where: { productId_in: $productIds }) {
+    id
+    marketId
+    title
+    author
+    aggregatedPools {
+      id
+      poolList
+    }
+    productId
+    product {
+      id
+      title
+    }
+    desiredCover
+    capitalToken
+    premiumToken
+    outflowProcessor
+  }
+
+  systems {
+    id
+  }
+
+  myPolicies: policies(where: { productId_in: $productIds, owner: $owner }) {
+    id
+    productId
+    marketId
+    policyId
+    owner
+    issuer
+    balance
+    coverage
+    premiumDeposit
+    underlyingCover
+    market {
+      capitalToken
+      premiumToken
+    }
+  }
+
+  _meta {
+    block {
+      number
+      timestamp
+      hash
+    }
+  }
+}

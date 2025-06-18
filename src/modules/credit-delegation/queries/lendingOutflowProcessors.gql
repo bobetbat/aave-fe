@@ -1,0 +1,21 @@
+query lendingOutflowProcessors {
+  lendingOutflowProcessors {
+    id
+    approver
+    rpcAddress
+    data
+    lastLoanRequestId
+    lastLoanId
+    asset
+    list
+    timelock
+  }
+
+  _meta {
+    block {
+      number
+      timestamp
+      hash
+    }
+  }
+}

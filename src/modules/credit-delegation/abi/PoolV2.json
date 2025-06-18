@@ -1,0 +1,4288 @@
+[
+  {
+    "inputs": [],
+    "name": "ErrAmountExceedsAvailableAssets",
+    "type": "error",
+    "signature": "0x5e7f7cfb"
+  },
+  {
+    "inputs": [],
+    "name": "ErrArchivedInflowStreamClaimed",
+    "type": "error",
+    "signature": "0x98fa24cc"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "minShares",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrDepositSlippageProtection",
+    "type": "error",
+    "signature": "0x1175c80a"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      }
+    ],
+    "name": "ErrErc2612PermitNotSupported",
+    "type": "error",
+    "signature": "0x9edd2999"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "receiver",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "max",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrExceededMaxDeposit",
+    "type": "error",
+    "signature": "0xea3838c7"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "receiver",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "max",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrExceededMaxMint",
+    "type": "error",
+    "signature": "0x700e0a84"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "max",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrExceededMaxRedeem",
+    "type": "error",
+    "signature": "0x640f7de7"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "max",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrExceededMaxWithdraw",
+    "type": "error",
+    "signature": "0x331fced2"
+  },
+  {
+    "inputs": [],
+    "name": "ErrExecutionDelayed",
+    "type": "error",
+    "signature": "0x2df541c6"
+  },
+  {
+    "inputs": [],
+    "name": "ErrImmutable",
+    "type": "error",
+    "signature": "0x449d17bc"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInflowStreamDeactivated",
+    "type": "error",
+    "signature": "0x9b4f15f7"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInflowStreamHasEnded",
+    "type": "error",
+    "signature": "0x2047ee83"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInflowStreamNotArchived",
+    "type": "error",
+    "signature": "0xb6128e5e"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInflowStreamNotDeactivated",
+    "type": "error",
+    "signature": "0x29024e76"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInflowStreamNotFinished",
+    "type": "error",
+    "signature": "0xbdf66f01"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "currentAllowance",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrInsufficientAllowance",
+    "type": "error",
+    "signature": "0x120120c4"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "currentBalance",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrInsufficientBalance",
+    "type": "error",
+    "signature": "0x483b38f2"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidAddress",
+    "type": "error",
+    "signature": "0xd1d16137"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrInvalidAmount",
+    "type": "error",
+    "signature": "0xcafb791c"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidDuration",
+    "type": "error",
+    "signature": "0x4af51a96"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidInflowDropToken",
+    "type": "error",
+    "signature": "0xd909778f"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidInflowStreamID",
+    "type": "error",
+    "signature": "0x965d38db"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidInflowStreamStartTime",
+    "type": "error",
+    "signature": "0x91849881"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "listID",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrInvalidListID",
+    "type": "error",
+    "signature": "0x42708ae8"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidProofs",
+    "type": "error",
+    "signature": "0xb80dcd81"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidRecipient",
+    "type": "error",
+    "signature": "0x2a7c2a7e"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidStartTime",
+    "type": "error",
+    "signature": "0xde16b261"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "expectedAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "actualAmount",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrInvalidTransferredAmount",
+    "type": "error",
+    "signature": "0xb0458ea7"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidValue",
+    "type": "error",
+    "signature": "0x0cc39ca1"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidWithdrawDelay",
+    "type": "error",
+    "signature": "0xa3c78957"
+  },
+  {
+    "inputs": [],
+    "name": "ErrInvalidWithdrawRequestExpiration",
+    "type": "error",
+    "signature": "0x8375ea08"
+  },
+  {
+    "inputs": [],
+    "name": "ErrLocked",
+    "type": "error",
+    "signature": "0xbd291a95"
+  },
+  {
+    "inputs": [],
+    "name": "ErrMaxActiveInflowStreamsExceeded",
+    "type": "error",
+    "signature": "0x6d82f365"
+  },
+  {
+    "inputs": [],
+    "name": "ErrMaxDepositExceeded",
+    "type": "error",
+    "signature": "0x8e12ae9d"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrMaxInflowDropTokens",
+    "type": "error",
+    "signature": "0x409d351e"
+  },
+  {
+    "inputs": [],
+    "name": "ErrMaxMintExceeded",
+    "type": "error",
+    "signature": "0x7bafcda7"
+  },
+  {
+    "inputs": [],
+    "name": "ErrMerkleTreeRootHashNotProvided",
+    "type": "error",
+    "signature": "0xcadc6481"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxAssets",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrMintSlippageProtection",
+    "type": "error",
+    "signature": "0xe9a87541"
+  },
+  {
+    "inputs": [],
+    "name": "ErrNotAllowed",
+    "type": "error",
+    "signature": "0x37e82d34"
+  },
+  {
+    "inputs": [],
+    "name": "ErrNotAllowedInflowDropSender",
+    "type": "error",
+    "signature": "0x1202afa0"
+  },
+  {
+    "inputs": [],
+    "name": "ErrNotAllowedInflowStreamCreator",
+    "type": "error",
+    "signature": "0xa93de7c7"
+  },
+  {
+    "inputs": [],
+    "name": "ErrNotPaused",
+    "type": "error",
+    "signature": "0x0da19881"
+  },
+  {
+    "inputs": [],
+    "name": "ErrNotSupported",
+    "type": "error",
+    "signature": "0xa3ce824a"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "assetToken",
+        "type": "address"
+      }
+    ],
+    "name": "ErrOnlyAssetToken",
+    "type": "error",
+    "signature": "0x3f4a821a"
+  },
+  {
+    "inputs": [],
+    "name": "ErrOnlyFactory",
+    "type": "error",
+    "signature": "0x38390d09"
+  },
+  {
+    "inputs": [],
+    "name": "ErrOnlyInflowStreamCreator",
+    "type": "error",
+    "signature": "0x98ffde55"
+  },
+  {
+    "inputs": [],
+    "name": "ErrOnlyKeeper",
+    "type": "error",
+    "signature": "0x1d10bc74"
+  },
+  {
+    "inputs": [],
+    "name": "ErrOnlyOperator",
+    "type": "error",
+    "signature": "0x8afdddec"
+  },
+  {
+    "inputs": [],
+    "name": "ErrOnlyOutflowProcessor",
+    "type": "error",
+    "signature": "0xb89c132c"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "timestamp",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrRedeemDelayed",
+    "type": "error",
+    "signature": "0xc0c98e12"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxAssets_",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrRedeemSlippageProtection",
+    "type": "error",
+    "signature": "0xc09720ad"
+  },
+  {
+    "inputs": [],
+    "name": "ErrRequiredWithdrawRequest",
+    "type": "error",
+    "signature": "0x7e29c613"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      }
+    ],
+    "name": "ErrTokenNotSupported",
+    "type": "error",
+    "signature": "0xf29225fc"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "allowedAmount",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrTooBigAmount",
+    "type": "error",
+    "signature": "0xbafb4125"
+  },
+  {
+    "inputs": [],
+    "name": "ErrUnknownTarget",
+    "type": "error",
+    "signature": ""
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "timestamp",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrWithdrawDelayed",
+    "type": "error",
+    "signature": "0x66c79ac0"
+  },
+  {
+    "inputs": [],
+    "name": "ErrWithdrawRequestExpired",
+    "type": "error",
+    "signature": "0x4743f0f3"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxShares",
+        "type": "uint256"
+      }
+    ],
+    "name": "ErrWithdrawSlippageProtection",
+    "type": "error",
+    "signature": "0x886b45dd"
+  },
+  {
+    "inputs": [],
+    "name": "ErrZeroAmount",
+    "type": "error",
+    "signature": "0x608294ac"
+  },
+  {
+    "inputs": [],
+    "name": "ErrZeroValue",
+    "type": "error",
+    "signature": "0xdbf97bca"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "spender",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      }
+    ],
+    "name": "Approval",
+    "type": "event",
+    "signature": "0x8c5be1e5"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "receiver",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      }
+    ],
+    "name": "Deposit",
+    "type": "event",
+    "signature": "0xdcbc1c05"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "accessListId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogAccessList",
+    "type": "event",
+    "signature": "0xc3d660f6"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "inflowStreamId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogAddInflowStreamAmount",
+    "type": "event",
+    "signature": "0x8b26aece"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "agreement",
+        "type": "string"
+      }
+    ],
+    "name": "LogAgreement",
+    "type": "event",
+    "signature": "0xbb601020"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "inflowStreamId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogArchivedInflowStreamClaimed",
+    "type": "event",
+    "signature": "0x79553963"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "cap",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogCap",
+    "type": "event",
+    "signature": "0xfd1d7ba5"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "capacity",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogCapacityChanged",
+    "type": "event",
+    "signature": "0x0f830e04"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "cappedAccessListId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogCappedAccessList",
+    "type": "event",
+    "signature": "0x9596650c"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "key",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "delay",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogCustomDelay",
+    "type": "event",
+    "signature": "0x6ab98d52"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "data",
+        "type": "string"
+      }
+    ],
+    "name": "LogData",
+    "type": "event",
+    "signature": "0x4609e0cc"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "details",
+        "type": "string"
+      }
+    ],
+    "name": "LogDetails",
+    "type": "event",
+    "signature": "0x21b9fd6e"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "msgSender",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "key",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "msgData",
+        "type": "bytes32"
+      }
+    ],
+    "name": "LogExecuted",
+    "type": "event",
+    "signature": "0x4c97ecc9"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "key",
+        "type": "bytes32"
+      }
+    ],
+    "name": "LogExecutionDeclined",
+    "type": "event",
+    "signature": "0xf02c1115"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "msgSender",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "key",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "dataHash",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "msgData",
+        "type": "bytes"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "delayedAt",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogExecutionDelayed",
+    "type": "event",
+    "signature": "0xfa6f874e"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "enum IPoolStorageModel.ImmutableSetting",
+        "name": "",
+        "type": "uint8"
+      }
+    ],
+    "name": "LogImmutableSetting",
+    "type": "event",
+    "signature": "0xf83cf7a9"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "implementationsSetID",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogImplementationsSetID",
+    "type": "event",
+    "signature": "0xe7082dcb"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "sourceId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "bucketId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "fee",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "airdrop",
+        "type": "bool"
+      }
+    ],
+    "name": "LogInflowDrop",
+    "type": "event",
+    "signature": "0x221233d4"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogInflowDropClaimed",
+    "type": "event",
+    "signature": "0xf109c8af"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "inflowDropSendersListId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogInflowDropSendersList",
+    "type": "event",
+    "signature": "0x357c8ec5"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "bucketId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "remainder",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogInflowDropTokenDetached",
+    "type": "event",
+    "signature": "0x8335d414"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "inflowStreamId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "startTime",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "endTime",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogInflowStream",
+    "type": "event",
+    "signature": "0x787d0277"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "inflowStreamId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "merkleTreeDistributionRootHash",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "proofsCid",
+        "type": "string"
+      }
+    ],
+    "name": "LogInflowStreamArchived",
+    "type": "event",
+    "signature": "0x77ad512a"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "inflowStreamClaimWindow",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogInflowStreamClaimWindow",
+    "type": "event",
+    "signature": "0x1a5f0406"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "inflowStreamId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "fee",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogInflowStreamClaimed",
+    "type": "event",
+    "signature": "0x4ac35146"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "inflowStreamCreatorsListId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogInflowStreamCreatorsListId",
+    "type": "event",
+    "signature": "0xd08e0593"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "inflowStreamId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogInflowStreamDeactivated",
+    "type": "event",
+    "signature": "0xed901c22"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "inflowDropTokensListId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogInflowTokensList",
+    "type": "event",
+    "signature": "0x43475df3"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "keeper",
+        "type": "address"
+      }
+    ],
+    "name": "LogKeeper",
+    "type": "event",
+    "signature": "0xe2c275e0"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "maintainersListId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogMaintainersList",
+    "type": "event",
+    "signature": "0x17b52f9b"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "maxActiveInflowStreams",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogMaxActiveInflowStreams",
+    "type": "event",
+    "signature": "0x28d96f71"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "maxInflowDropTokens",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogMaxInflowDropTokens",
+    "type": "event",
+    "signature": "0xd6a23e2b"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "operator",
+        "type": "address"
+      }
+    ],
+    "name": "LogOperator",
+    "type": "event",
+    "signature": "0xd524e192"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "operatorFee",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogOperatorFee",
+    "type": "event",
+    "signature": "0xb5258867"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "operator",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogOperatorFeeClaimed",
+    "type": "event",
+    "signature": "0x02fdb45f"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "operatorFeeRecipient",
+        "type": "address"
+      }
+    ],
+    "name": "LogOperatorFeeRecipient",
+    "type": "event",
+    "signature": "0x5a4a32c2"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      }
+    ],
+    "name": "LogOutflow",
+    "type": "event",
+    "signature": "0xff210b9e"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "outflowProcessor",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "enabled",
+        "type": "bool"
+      }
+    ],
+    "name": "LogOutflowProcessor",
+    "type": "event",
+    "signature": "0x6f6059d8"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "delayedAt",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogRedeemRequest",
+    "type": "event",
+    "signature": "0x8f9782bf"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "implementationsSetID",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogUpgradeableWithApproval",
+    "type": "event",
+    "signature": "0x641228ea"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "withdrawDelay",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogWithdrawDelay",
+    "type": "event",
+    "signature": "0x86ecef3a"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "delayedAt",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogWithdrawRequest",
+    "type": "event",
+    "signature": "0x4e30a4b5"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "withdrawRequestExpiration",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogWithdrawRequestExpiration",
+    "type": "event",
+    "signature": "0xc33904b0"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "inflowStreamId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "distributor",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogWithdrawUnclaimedInflowStream",
+    "type": "event",
+    "signature": "0x2c2f7a29"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "from",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      }
+    ],
+    "name": "Transfer",
+    "type": "event",
+    "signature": "0xddf252ad"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "receiver",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      }
+    ],
+    "name": "Withdraw",
+    "type": "event",
+    "signature": "0xfbde797d"
+  },
+  {
+    "inputs": [],
+    "name": "accessListId",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x5ecc1aba"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      }
+    ],
+    "name": "accumulatedInflowDrop",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x80b6ef54"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "idx",
+        "type": "uint256"
+      }
+    ],
+    "name": "activeInflowStreams",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x64041a4e"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "inflowStreamId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "addInflowStreamAmount",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x92708b72"
+  },
+  {
+    "inputs": [],
+    "name": "agreement",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x7db3a946"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "spender",
+        "type": "address"
+      }
+    ],
+    "name": "allowance",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xdd62ed3e"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "spender",
+        "type": "address"
+      }
+    ],
+    "name": "allowances",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "allowace",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x55b6ed5c"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "spender",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "approve",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x095ea7b3"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "inflowStreamId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "archivedInflowStreamClaimed",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x0b12bb21"
+  },
+  {
+    "inputs": [],
+    "name": "asset",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x38d52e0f"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "balanceOf",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x70a08231"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "balances",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "balance",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x27e235e3"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "bucketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "bucketAccounts",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "inflowAccumulator",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "accumulatedInflow",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x24cdbc45"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "bucketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "buckets",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "inflowAccumulator",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "inflowTotalBalance",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x9b51fb0d"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "erc20_",
+        "type": "address"
+      }
+    ],
+    "name": "bucketsLookup",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "bucketId",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x995b5ad2"
+  },
+  {
+    "inputs": [],
+    "name": "cap",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x355274ea"
+  },
+  {
+    "inputs": [],
+    "name": "cappedAccessListId",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xd6eb370a"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      }
+    ],
+    "name": "claimAllInflowDrops",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x5b735b53"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      }
+    ],
+    "name": "claimAllInflowStreams",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x6f3c09fc"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "inflowStreamId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32[]",
+        "name": "proofs",
+        "type": "bytes32[]"
+      }
+    ],
+    "name": "claimArchivedInflowStream",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x9cc26456"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      }
+    ],
+    "name": "claimInflowDrop",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x6610c206"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "inflowStreamId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      }
+    ],
+    "name": "claimInflowStream",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xfc33b38f"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      }
+    ],
+    "name": "claimOperatorFee",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x4c21c309"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "ids",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      }
+    ],
+    "name": "claimSelectedInflowStreams",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xb74d7e39"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      }
+    ],
+    "name": "convertToAssets",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x07a2d13a"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      }
+    ],
+    "name": "convertToShares",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xc6e6f592"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "startTime",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "duration",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "sid",
+        "type": "string"
+      }
+    ],
+    "name": "createInflowStream",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xd1383e1d"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      }
+    ],
+    "name": "createRedeemRequest",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xf8b9e8d9"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      }
+    ],
+    "name": "createWithdrawRequest",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x74dc9d1a"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "key",
+        "type": "bytes32"
+      }
+    ],
+    "name": "customDelays",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "delay",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x79c40c80"
+  },
+  {
+    "inputs": [],
+    "name": "data",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x73d4a13a"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "activeInflowStreamIdIdx",
+        "type": "uint256"
+      }
+    ],
+    "name": "deactivateInflowStream",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x3302cee6"
+  },
+  {
+    "inputs": [],
+    "name": "decimals",
+    "outputs": [
+      {
+        "internalType": "uint8",
+        "name": "",
+        "type": "uint8"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x313ce567"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "key",
+        "type": "bytes32"
+      }
+    ],
+    "name": "declineExecution",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x54680259"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "key",
+        "type": "bytes32"
+      }
+    ],
+    "name": "delayedExecutions",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "delayedAt",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "dataHash",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x96cc45ef"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "receiver",
+        "type": "address"
+      }
+    ],
+    "name": "deposit",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x6e553f65"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "receiver",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "minShares",
+        "type": "uint256"
+      }
+    ],
+    "name": "deposit",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xbc157ac1"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "receiver",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "minShares",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "deadline",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint8",
+        "name": "v",
+        "type": "uint8"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "r",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "s",
+        "type": "bytes32"
+      }
+    ],
+    "name": "depositWithErc2612Permit",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x35cdaf9f"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      }
+    ],
+    "name": "detachInflowDropToken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xe6346f35"
+  },
+  {
+    "inputs": [],
+    "name": "details",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x565974d3"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "inflowStreamId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "merkleTreeDistributionRootHash",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "string",
+        "name": "proofsCid",
+        "type": "string"
+      }
+    ],
+    "name": "distributeUnclaimedAmounts",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x7343f7a6"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "inflowStreamId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "earned",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xe39c08fc"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "implementationsSetID",
+        "type": "uint256"
+      }
+    ],
+    "name": "emergencySetImplementationsSet",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xe95816e5"
+  },
+  {
+    "inputs": [],
+    "name": "factory",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xc45a0155"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "getInflowStreamsEarnedAmounts",
+    "outputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "inflowStreams",
+        "type": "uint256[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x9d58eeb7"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "enum IPoolStorageModel.ImmutableSetting",
+        "name": "",
+        "type": "uint8"
+      }
+    ],
+    "name": "immutableSettings",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x7c77b6b8"
+  },
+  {
+    "inputs": [],
+    "name": "implementationsSetID",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x05c728e5"
+  },
+  {
+    "inputs": [],
+    "name": "inflowDropSendersListId",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x0afcded1"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      }
+    ],
+    "name": "inflowDropTokenSupported",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x87fcf441"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "index",
+        "type": "uint256"
+      }
+    ],
+    "name": "inflowDropTokens",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x11f1d04a"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      }
+    ],
+    "name": "inflowDropsTotals",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xce38a20b"
+  },
+  {
+    "inputs": [],
+    "name": "inflowStreamClaimWindow",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x3eb2aa6f"
+  },
+  {
+    "inputs": [],
+    "name": "inflowStreamCreatorsListId",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xd9a78e24"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "inflowStreamId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "inflowStreamEarnedStored",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x27d35c0b"
+  },
+  {
+    "inputs": [],
+    "name": "inflowStreamIdInc",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x62a6b1f6"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "inflowStreamId",
+        "type": "uint256"
+      }
+    ],
+    "name": "inflowStreamRate",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xafb08901"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "inflowStreamId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "inflowStreamRatePaid",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xc4a829c9"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "inflowStreamId",
+        "type": "uint256"
+      }
+    ],
+    "name": "inflowStreams",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "creator",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "startTime",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "endTime",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "rate",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "lastUpdateTime",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "rateStored",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "deactivated",
+        "type": "bool"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "merkleTreeDistributionRootHash",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "string",
+        "name": "proofsCid",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "sid",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x58ae60f3"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "inflowStreamId",
+        "type": "uint256"
+      }
+    ],
+    "name": "inflowStreamsOperatorFees",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "operatorFee",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x4fdf3079"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      }
+    ],
+    "name": "inflowStreamsTotals",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x66dfbb57"
+  },
+  {
+    "inputs": [],
+    "name": "inflowTokensListId",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x911319c5"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address[]",
+            "name": "outflowProcessors",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address",
+            "name": "assetToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "nominatedToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "keeper",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "operator",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "operatorFeeRecipient",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "operatorFee",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "cap",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "withdrawDelay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "withdrawRequestExpiration",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "accessListId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "cappedAccessListId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "inflowStreamCreatorsListId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "inflowDropSendersListId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "inflowTokensListId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maintainersListId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "agreement",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "details",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "data",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "name1",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "name2",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct IPoolBase.CreatePoolParams",
+        "name": "params",
+        "type": "tuple"
+      },
+      {
+        "internalType": "address",
+        "name": "list",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "symbol",
+        "type": "string"
+      }
+    ],
+    "name": "initialize",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x826ecaad"
+  },
+  {
+    "inputs": [],
+    "name": "keeper",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xaced1661"
+  },
+  {
+    "inputs": [],
+    "name": "lastBucketId",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x6a7e1dd4"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "inflowStreamId",
+        "type": "uint256"
+      }
+    ],
+    "name": "lastTimeInflowStreamApplicable",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xb3c64d64"
+  },
+  {
+    "inputs": [],
+    "name": "list",
+    "outputs": [
+      {
+        "internalType": "contract IList",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x0f560cd7"
+  },
+  {
+    "inputs": [],
+    "name": "maintainersListId",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x77418067"
+  },
+  {
+    "inputs": [],
+    "name": "maxActiveInflowStreams",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x914bc520"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      }
+    ],
+    "name": "maxDeposit",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "maxAssets",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x402d267d"
+  },
+  {
+    "inputs": [],
+    "name": "maxInflowDropTokens",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xf7470ec5"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      }
+    ],
+    "name": "maxMint",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "maxShares",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xc63d75b6"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      }
+    ],
+    "name": "maxRedeem",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "maxShares",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xd905777e"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      }
+    ],
+    "name": "maxWithdraw",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "maxAssets",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xce96cb77"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "receiver",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxAssets",
+        "type": "uint256"
+      }
+    ],
+    "name": "mint",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x836a1040"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "receiver",
+        "type": "address"
+      }
+    ],
+    "name": "mint",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x94bf804d"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "receiver",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxAssets",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "deadline",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint8",
+        "name": "v",
+        "type": "uint8"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "r",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "s",
+        "type": "bytes32"
+      }
+    ],
+    "name": "mintWithErc2612Permit",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x915fd869"
+  },
+  {
+    "inputs": [],
+    "name": "name",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x06fdde03"
+  },
+  {
+    "inputs": [],
+    "name": "nominatedToken",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x07ae7329"
+  },
+  {
+    "inputs": [],
+    "name": "operator",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x570ca735"
+  },
+  {
+    "inputs": [],
+    "name": "operatorFee",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x89afc0f1"
+  },
+  {
+    "inputs": [],
+    "name": "operatorFeeRecipient",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xc4fdb245"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      }
+    ],
+    "name": "operatorFees",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xcb9dad1e"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "outflowProcessor",
+        "type": "address"
+      }
+    ],
+    "name": "outflowProcessors",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "enabled",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x1b6e8093"
+  },
+  {
+    "inputs": [],
+    "name": "pausable",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x36775847"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      }
+    ],
+    "name": "previewDeposit",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xef8b30f7"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      }
+    ],
+    "name": "previewMint",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xb3d7f6b9"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      }
+    ],
+    "name": "previewRedeem",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x4cdad506"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      }
+    ],
+    "name": "previewWithdraw",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x0a28a477"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      }
+    ],
+    "name": "pullOutflow",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "transferredAmount",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x271dbd0c"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "sourceId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      }
+    ],
+    "name": "pushAirdropAsInflowDrop",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xdbb53ecd"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "sourceId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "erc20",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "pushInflowDrop",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x5ec9591c"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "receiver",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "minAssets",
+        "type": "uint256"
+      }
+    ],
+    "name": "redeem",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x9f40a7b3"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "receiver",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      }
+    ],
+    "name": "redeem",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xba087652"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "accessListId",
+        "type": "uint256"
+      }
+    ],
+    "name": "setAccessList",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x1850d67c"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "agreement",
+        "type": "string"
+      }
+    ],
+    "name": "setAgreement",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xab3dcc37"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "cap",
+        "type": "uint256"
+      }
+    ],
+    "name": "setCap",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x47786d37"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "cappedAccessListId",
+        "type": "uint256"
+      }
+    ],
+    "name": "setCappedAccessList",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x76164f34"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "key",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint256",
+        "name": "delay",
+        "type": "uint256"
+      }
+    ],
+    "name": "setCustomDelay",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x7e1fb93e"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "data",
+        "type": "string"
+      }
+    ],
+    "name": "setData",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x47064d6a"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "details",
+        "type": "string"
+      }
+    ],
+    "name": "setDetails",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x3e8a8009"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "enum IPoolStorageModel.ImmutableSetting",
+        "name": "setting",
+        "type": "uint8"
+      }
+    ],
+    "name": "setImmutability",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x45f4b21b"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "implementationsSetID_",
+        "type": "uint256"
+      }
+    ],
+    "name": "setImplementationsSet",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x85c75c1d"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "inflowDropSendersListId",
+        "type": "uint256"
+      }
+    ],
+    "name": "setInflowDropSendersList",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xaa993acf"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "inflowStreamClaimWindow",
+        "type": "uint256"
+      }
+    ],
+    "name": "setInflowStreamClaimWindow",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x243419ce"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "inflowStreamCreatorsListId",
+        "type": "uint256"
+      }
+    ],
+    "name": "setInflowStreamCreatorsList",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x8b9ecc12"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "inflowTokensListId",
+        "type": "uint256"
+      }
+    ],
+    "name": "setInflowTokensList",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xe5b8685e"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "keeper",
+        "type": "address"
+      }
+    ],
+    "name": "setKeeper",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x748747e6"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "maintainersList",
+        "type": "uint256"
+      }
+    ],
+    "name": "setMaintainersList",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xb218f43b"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "maxActiveInflowStreams",
+        "type": "uint256"
+      }
+    ],
+    "name": "setMaxActiveInflowStreams",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x251cd14c"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "maxInflowDropTokens",
+        "type": "uint256"
+      }
+    ],
+    "name": "setMaxInflowDropTokens",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xf2c2adcb"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "operator",
+        "type": "address"
+      }
+    ],
+    "name": "setOperator",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xb3ab15fb"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "poolFee",
+        "type": "uint256"
+      }
+    ],
+    "name": "setOperatorFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x1d095805"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "operatorFeeRecipient",
+        "type": "address"
+      }
+    ],
+    "name": "setOperatorFeeRecipient",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xb542ad18"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "outflowProcessor",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "status",
+        "type": "bool"
+      }
+    ],
+    "name": "setOutflowProcessor",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x2e85da24"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "withdrawDelay",
+        "type": "uint256"
+      }
+    ],
+    "name": "setWithdrawDelay",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x72f0cb30"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "withdrawRequestExpiration",
+        "type": "uint256"
+      }
+    ],
+    "name": "setWithdrawRequestExpiration",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x3b2b9ce6"
+  },
+  {
+    "inputs": [],
+    "name": "switchToUpgradeableWithApproval",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x87156d3e"
+  },
+  {
+    "inputs": [],
+    "name": "symbol",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x95d89b41"
+  },
+  {
+    "inputs": [],
+    "name": "totalAssets",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x01e1d114"
+  },
+  {
+    "inputs": [],
+    "name": "totalSupply",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x18160ddd"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "transfer",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xa9059cbb"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "transferFrom",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x23b872dd"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "updateAccount",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x2ce3d440"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "updateInflowStreams",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xf63ce2c4"
+  },
+  {
+    "inputs": [],
+    "name": "upgradabilityMode",
+    "outputs": [
+      {
+        "internalType": "enum IProxyModel.UpgradabilityMode",
+        "name": "",
+        "type": "uint8"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xcdba7c81"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "inflowStreamId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32[]",
+        "name": "proofs",
+        "type": "bytes32[]"
+      }
+    ],
+    "name": "verifyArchivedInflowStreamClaim",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x170711e2"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "receiver",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxShares",
+        "type": "uint256"
+      }
+    ],
+    "name": "withdraw",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xa318c1a4"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "receiver",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      }
+    ],
+    "name": "withdraw",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xb460af94"
+  },
+  {
+    "inputs": [],
+    "name": "withdrawDelay",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x0288a39c"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "inflowStreamId",
+        "type": "uint256"
+      }
+    ],
+    "name": "withdrawInflowStreamUnclaimedAmount",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xebfd5637"
+  },
+  {
+    "inputs": [],
+    "name": "withdrawRequestExpiration",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x3fa39f72"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "withdrawRequests",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "assets",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "shares",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "delayedAt",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x52df49ec"
+  }
+]
