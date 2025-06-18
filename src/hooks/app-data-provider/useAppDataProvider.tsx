@@ -11,6 +11,7 @@ import { formatUnits } from 'ethers/lib/utils';
 import React, { PropsWithChildren, useContext } from 'react';
 import { EmodeCategory } from 'src/helpers/types';
 import { useWeb3Context } from 'src/libs/hooks/useWeb3Context';
+import { useCreditDelegationContext } from 'src/modules/credit-delegation/CreditDelegationContext';
 import { useRootStore } from 'src/store/root';
 import { GHO_MINTING_MARKETS } from 'src/utils/ghoUtilities';
 
@@ -79,6 +80,7 @@ export const AppDataProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const currentMarketData = useRootStore((state) => state.currentMarketData);
   const currentMarket = useRootStore((state) => state.currentMarket);
   // pool hooks
+  const { markets } = useCreditDelegationContext();
 
   const { data: reservesData, isPending: reservesDataLoading } =
     usePoolReservesHumanized(currentMarketData);
@@ -182,11 +184,35 @@ export const AppDataProvider: React.FC<PropsWithChildren> = ({ children }) => {
     }
   }
 
+  const atomicaMarkets: FormattedReservesAndIncentives[] = markets
+    .map((market) => {
+      const reserve = formattedPoolReserves?.find(
+        (reserve) => reserve.underlyingAsset === market.capitalToken?.address
+      );
+      if (!reserve) return null;
+      return {
+        ...reserve,
+        totalLiquidity: market.totalLiquidity ?? '0',
+        totalLiquidityUSD: market.totalLiquidityUSD ?? '0',
+        supplyAPY: market.supplyAPY ?? '0',
+        variableBorrowAPY: String(market.apr),
+        totalDebt: market.totalDebt ?? '0',
+        totalDebtUSD: market.totalDebtUSD ?? '0',
+        availableLiquidityUSD: market.availableBorrowsInUSD ?? '0',
+        availableLiquidity: market.availableBorrows ?? '0',
+        borrowUsageRatio: market.utilization ?? '0',
+        supplyCap: market.connectedPool?.capitalRequirementFormatted ?? 'unlimited',
+      };
+    })
+    .filter((market) => market !== null);
+  const reserves = currentMarketData.secondaryMarket ? atomicaMarkets : formattedPoolReserves;
+
+  // todo: implement reserves data from atomica markets here. Merge atomica market data with existing reserves (FOR secondary Markets ONLY)
   return (
     <AppDataContext.Provider
       value={{
         loading: isReservesLoading || (!!currentAccount && isUserDataLoading),
-        reserves: formattedPoolReserves || [],
+        reserves: reserves || [],
         eModes,
         user,
         userReserves: userReserves || [],

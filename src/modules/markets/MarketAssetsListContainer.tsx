@@ -8,7 +8,6 @@ import { Link } from 'src/components/primitives/Link';
 import { Warning } from 'src/components/primitives/Warning';
 import { TitleWithSearchBar } from 'src/components/TitleWithSearchBar';
 import { useAppDataContext } from 'src/hooks/app-data-provider/useAppDataProvider';
-import { FormattedReservesAndIncentives } from 'src/hooks/pool/usePoolFormattedReserves';
 import MarketAssetsList from 'src/modules/markets/MarketAssetsList';
 import { useRootStore } from 'src/store/root';
 import { fetchIconSymbolAndName } from 'src/ui-config/reservePatches';
@@ -16,7 +15,6 @@ import { getGhoReserve, GHO_MINTING_MARKETS, GHO_SYMBOL } from 'src/utils/ghoUti
 import { useShallow } from 'zustand/shallow';
 
 import { GENERAL } from '../../utils/mixPanelEvents';
-import { useCreditDelegationContext } from '../credit-delegation/CreditDelegationContext';
 import { GhoBanner } from './Gho/GhoBanner';
 
 function shouldDisplayGhoBanner(marketTitle: string, searchTerm: string): boolean {
@@ -38,7 +36,6 @@ function shouldDisplayGhoBanner(marketTitle: string, searchTerm: string): boolea
 
 export const MarketAssetsListContainer = () => {
   const { reserves, loading } = useAppDataContext();
-  const { markets } = useCreditDelegationContext();
   const [trackEvent, currentMarket, currentMarketData, currentNetworkConfig] = useRootStore(
     useShallow((store) => [
       store.trackEvent,
@@ -91,24 +88,6 @@ export const MarketAssetsListContainer = () => {
 
   const frozenOrPausedReserves = filteredData.filter((r) => r.isFrozen || r.isPaused);
 
-  const atomicaMarkets: FormattedReservesAndIncentives[] = markets
-    .map((market) => {
-      const reserve = filteredData.find(
-        (reserve) => reserve.underlyingAsset === market.capitalToken?.address
-      );
-      if (!reserve) return null;
-      return {
-        ...reserve,
-        totalLiquidity: market.totalLiquidity ?? '-',
-        totalLiquidityUSD: market.totalLiquidityUSD ?? '-',
-        supplyAPY: market.supplyAPY ?? '-',
-        variableBorrowAPY: String(market.apr),
-        totalDebt: market.totalDebt ?? '-',
-        totalDebtUSD: market.totalDebtUSD ?? '-',
-      };
-    })
-    .filter((market) => market !== null);
-
   return (
     <ListWrapper
       titleComponent={
@@ -130,10 +109,7 @@ export const MarketAssetsListContainer = () => {
       )}
 
       {/* Unfrozen assets list */}
-      <MarketAssetsList
-        reserves={currentMarketData.secondaryMarket ? atomicaMarkets : unfrozenReserves}
-        loading={loading}
-      />
+      <MarketAssetsList reserves={unfrozenReserves} loading={loading} />
 
       {/* Frozen or paused assets list */}
       {frozenOrPausedReserves.length > 0 && (

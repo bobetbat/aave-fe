@@ -257,6 +257,8 @@ export interface AtomicaDelegationPoolV1 {
 }
 
 export interface AtomicaBorrowMarket extends MarketsApiData {
+  connectedPool: AtomicaDelegationPool;
+  utilization: string;
   id: string;
   marketId: string;
   symbol: string;

@@ -267,27 +267,15 @@ export const usePoolsAndMarkets = () => {
       // the actual percent
       const apr = Number(marketApiData?.currentApr ?? 0) / 100;
 
-      const rawTotalSupply = connectedPools.reduce((sum, pool) => {
-        // pull out the raw string/number (or default to "0")
-        const assets = pool.lendingTokenInfo?.totalAssets ?? 0;
-        // wrap in BigNumber and add
-        return sum.plus(assets);
-      }, new BigNumber(0));
-
       const rawTotalBorrowed = connectedPools.reduce((sum, pool) => {
         const borrowed = pool.lendingTokenInfo?.totalBorrowedPrincipal ?? 0;
         return sum.plus(new BigNumber(borrowed));
       }, new BigNumber(0));
 
-      const totalSupply = normalize(
-        rawTotalSupply,
-        marketApiData?.capitalToken?.decimals ?? WEI_DECIMALS
-      );
       const totalBorrowed = normalize(
         rawTotalBorrowed,
         marketApiData?.capitalToken?.decimals ?? WEI_DECIMALS
       );
-
       return {
         id: market.id,
         marketId: market.marketId,
@@ -314,8 +302,10 @@ export const usePoolsAndMarkets = () => {
         supplyAPY: connectedPools[0]?.totalApy, // 1pool per 1market
         totalDebt: totalBorrowed,
         totalDebtUSD: '0',
-        totalLiquidity: String(Number(totalSupply) + availableBorrows),
+        totalLiquidity: String(Number(totalBorrowed) + availableBorrows),
         totalLiquidityUSD: String(Number(0) + availableBorrowsInUSD), //todo: calc usd price
+        connectedPool: connectedPools[0],
+        utilization: connectedPools[0]?.utilization,
       } as AtomicaBorrowMarket;
     });
   }, [pools, marketsList, filteredMarkets]);

@@ -150,8 +150,8 @@ export default function MyApp(props: MyAppProps) {
                     <AddressBlocked>
                       <ModalContextProvider>
                         <SharedDependenciesProvider>
-                          <AppDataProvider>
-                            <CreditDelegationProvider>
+                          <CreditDelegationProvider>
+                            <AppDataProvider>
                               <GasStationProvider>
                                 {getLayout(<Component {...pageProps} />)}
                                 <SupplyModal />
@@ -170,8 +170,8 @@ export default function MyApp(props: MyAppProps) {
                                 <BridgeModal />
                                 <ReadOnlyModal />
                               </GasStationProvider>
-                            </CreditDelegationProvider>
-                          </AppDataProvider>
+                            </AppDataProvider>
+                          </CreditDelegationProvider>
                         </SharedDependenciesProvider>
                       </ModalContextProvider>
                     </AddressBlocked>
