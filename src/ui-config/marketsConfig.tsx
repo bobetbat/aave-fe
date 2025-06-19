@@ -141,12 +141,12 @@ export const marketsData: Partial<{
     isFork: false,
     subgraphUrl: 'https://proxy.somnia.chain.love/subgraphs/somnia-testnet/arenas-cd',
     addresses: {
-      WALLET_BALANCE_PROVIDER: '0xbee26d9F7Fa1B58BD920A8717460A4df9A2242D5', // WalletBalanceProvider
-      UI_POOL_DATA_PROVIDER: '0x985E9c2Cf64291f0a83da332857BCaE69d9b221b', // UiPoolDataProviderV3
-      WETH_GATEWAY: '0xc01d6b67450EEFe2E0981318F4eCE3bFFaB75657', // WrappedTokenGatewayV3
-      UI_INCENTIVE_DATA_PROVIDER: '0x1e5B2c2e2CCa5f23004D30C7B881584B09bC9159', //UiIncentiveDataProviderV3
-      LENDING_POOL_ADDRESS_PROVIDER: '0xBA4764aA7E6f18Fb0EbDB40BA8f07064EeE47CAF', // PoolAddressesProvider-Aave (Aave is marketName on deploy)
-      LENDING_POOL: '0x38b23393437f23ffa28C7Fd55DEaF9E1c0a49aa7', // Pool-Proxy-Aave (Aave is marketName on deploy)
+      WALLET_BALANCE_PROVIDER: '0x7a89D37803Ade3D1DBf5DdA2102330000fcaDA53', // WalletBalanceProvider
+      UI_POOL_DATA_PROVIDER: '0xB34559E3f054709e8c89bF8D8273610CE970a4E8', // UiPoolDataProviderV3
+      WETH_GATEWAY: '0xEE84b51d3060dF3c730Ff3CF3005cb7183E7B03B', // WrappedTokenGatewayV3
+      UI_INCENTIVE_DATA_PROVIDER: '0xf0B08b90896Fc8cfbDc327dD43D4886c04b09746', //UiIncentiveDataProviderV3
+      LENDING_POOL_ADDRESS_PROVIDER: '0x6Df291f88e5A28025a065d2A788117A78976F167', // PoolAddressesProvider-Aave (Aave is marketName on deploy)
+      LENDING_POOL: '0xA5E526C4c49B5431Dc974D06542238828147CCa7', // Pool-Proxy-Aave (Aave is marketName on deploy)
       FAUCET: '', // Faucet-Aave (Aave is marketName on deploy)
 
       REPAY_WITH_COLLATERAL_ADAPTER: '', // TODO: Deploy or disable feature
